@@ -6,6 +6,8 @@ let accountState
 
 // accountId = 234  // const cannot be changed
 
+//Try not to use var keyword
+
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState]);
 
 
