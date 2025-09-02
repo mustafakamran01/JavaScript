@@ -1,0 +1,16 @@
+const accountId = 322513
+let accountEmail = "kamran@google.com"
+var accountPassword = "Password"
+accountCity = "Patna"
+let accountState
+
+// accountId = 234  // const cannot be changed
+
+console.table([accountId, accountEmail, accountPassword, accountCity, accountState]);
+
+
+accountEmail = "mustafa@microsoft.com"
+accountPassword = "New Password"
+accountCity = "New Delhi"
+
+console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
