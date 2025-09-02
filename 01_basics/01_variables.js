@@ -6,8 +6,10 @@ let accountState
 
 // accountId = 234  // const cannot be changed
 
-//Try not to use var keyword
-
+/*
+    Try not to use var keyword,
+    because of issue in block scope and functional scope
+*/
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState]);
 
 
