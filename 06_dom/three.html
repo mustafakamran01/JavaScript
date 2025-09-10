@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    
+</body>
+<script>
+
+    const myH1 = document.createElement('h1')
+    myH1.className = 'first'
+    myH1.id = Math.round(Math.random() * 10 + 1)
+    console.log(myH1);
+    myH1.setAttribute('title', 'header-title')
+    myH1.style.backgroundColor = 'white'
+    myH1.style.color = 'blue'
+    myH1.style.padding = '15px'
+    myH1.innerText = "About DOM"
+
+    document.body.appendChild(myH1)
+
+
+    const myDiv = document.createElement('div')
+    console.log(myDiv);
+    myDiv.className = "main"
+    myDiv.id = Math.round(Math.random() * 10 + 1)
+    myDiv.setAttribute('title', 'generated title')
+    myDiv.style.backgroundColor = "brown"
+    myDiv.style.color = "white"
+    myDiv.style.padding = '10px'
+    // myDiv.innerText = "Learning DOM manipulation"
+    const text = document.createTextNode("Learning DOM manipulation")
+    myDiv.appendChild(text)
+
+    document.body.appendChild(myDiv)
+
+</script>
+</html>
