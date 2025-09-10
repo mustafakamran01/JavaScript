@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: antiquewhite;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    // This how we add element
+
+    function addLanguage(langName){
+        const list_item = document.createElement('li')
+        list_item.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(list_item)
+    }
+
+    addLanguage("Python")
+    addLanguage("Java")
+
+    function addOptiLanguage(langName){
+        const list_item = document.createElement('li')
+        list_item.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(list_item)
+    }
+    /*
+        it's an more optimize way of creating element
+    */
+
+    addOptiLanguage("C++")
+    addOptiLanguage("Swift")
+
+    // This is how we edit element
+
+    const fourth_item = document.querySelector('li:nth-child(4)')
+    // const updated_list = document.createElement('li').appendChild(document.createTextNode("GoLang"))
+    const new_item = document.createElement('li')
+    new_item.appendChild(document.createTextNode("GoLang"))
+    fourth_item.replaceWith(new_item)
+    // fourth_item.replaceWith(updated_list)
+    
+
+    // const fouth_item = document.querySelector('li:nth-child(4)')
+    // const new_li = document.createElement('li')
+    // new_li.textContent = "GoLang"
+    // fouth_item.replaceWith(new_li)
+
+
+    // Another example of editing element
+    
+    const first_item = document.querySelector('li:nth-child(1)')
+    first_item.outerHTML = '<li>TypeScript</li>'
+
+    // This how we remove element
+
+    document.querySelector('li:nth-child(4)').remove()
+    
+
+
+</script>
+</html>
