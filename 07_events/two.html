@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout( () => {
+    //     console.log("Mustafa Kamran");
+        
+    // }, 3000)
+    // it will print the code for one time after given time i.e, 3sec 
+
+    function sayMyName(){
+        console.log("Mustafa Kamran");
+        
+    }
+
+    function changeText(){
+        document.querySelector('h1').innerHTML = 'Software Developer'
+    }
+
+    const refTimeOut = setTimeout(changeText, 5000)
+
+    document.querySelector('button').addEventListener('click', (e) => {
+        clearTimeout(refTimeOut)
+        console.log("Event stopped");
+        
+    })
+    // this is how we apply a clearTimeOut function to stop a setTimout function
+
+
+
+
+
+
+</script>
+</html>
