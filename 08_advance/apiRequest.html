@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    table, th, td 
+    {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td 
+    {
+        padding: 15px;
+    }
+
+    body
+    {
+        background-color: #414141;
+        color: aliceblue;
+    }
+
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+
+<body>
+    <!-- Value	            State	                                Description
+    0	                UNSENT	                                Client has been created. open() not called yet.
+    1	                OPENED	                                open() has been called.
+    2	                HEADERS_RECEIVED	                    send() has been called, and headers and status are available.
+    3	                LOADING	                                Downloading; responseText holds partial data.
+    4	                DONE	                                The operation is complete. -->
+
+<table>
+    <tr>
+        <th>Value</th>
+        <th>State</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>UNSENT</td>
+        <td>Client has been created. open() not called yet.</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>OPENED</td>
+        <td>open() has been called.</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>HEADERS_RECEIVED</td>
+        <td>send() has been called, and headers and status are available.</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>LOADING</td>
+        <td>Downloading; responseText holds partial data.</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>DONE</td>
+        <td>The operation is complete.</td>
+    </tr>
+</table>
+<br>
+<button id="info">About user</button>
+<div id="output"></div>
+<br>
+
+</body>
+<script>
+    const requestURL = "https://api.github.com/users/hiteshchoudhary"
+
+    let data;
+
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestURL)
+    xhr.onreadystatechange = () => {
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            data = JSON.parse(xhr.responseText) // this will return a string value, so here we are converting string to JSON value
+            console.log(typeof data)
+            console.log(data.followers);
+            console.log(data);
+
+            // document.getElementById('info').addEventListener('click', (e) => {
+            //     document.getElementById('output').innerHTML = `
+            //     <div class="card">
+            //         <img src="${data.avatar_url}" alt="Avatar" style="width:30%">
+            //         <div class="container">
+            //             <h4><b>Name: ${data.name}</b></h4>
+            //             <p>Followers: ${data.followers}</p>
+            //         </div>
+            //     </div>
+            //     `;
+            // });
+        }
+    };
+    xhr.send()
+
+    document.getElementById('info').addEventListener('click', (e) => {
+        document.getElementById('output').innerHTML = `
+            <div class="card">
+                <img src="${data.avatar_url}" alt="Avatar" style="width:30%">
+                <div class="container">
+                    <h4><b>Name: ${data.name}</b></h4>
+                    <p>Followers: ${data.followers}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    
+</script>
+</html>
