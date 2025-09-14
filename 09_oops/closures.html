@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // document.querySelector('#orange').addEventListener('click', () => {
+    //     document.body.style.backgroundColor = 'orange'
+    // })
+    // document.querySelector('#green').addEventListener('click', () => {
+    //     document.body.style.backgroundColor = 'green'
+    // })
+
+    function colorChange(color){
+        return () => {
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document
+    .getElementById('orange')
+    .addEventListener('click', colorChange('orange'))
+
+    document
+    .getElementById('green')
+    .addEventListener('click', colorChange('green'))
+</script>
+</html>
