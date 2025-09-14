@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Click me</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            // requirement
+
+            document
+                .querySelector("button")
+                .addEventListener('click', this.handleClick.bind(this))
+        }
+
+        handleClick(){
+            console.log("Button clicked");
+            console.log(this.server);
+            
+        }
+    }
+    const chai = new React()
+    /*
+    here eventhough we create an instance of react class using new keyword and store that new created object in the chai variable then that object is having server and library properties and handleClick() fn but when when we are calling the fn handle click inside addEventListener() then what happen is actually the element button is calling the function handleClick() so here this refers to the button element not the context of object created using class React so here It is priniting <button>...</button > but when we use bind() then we are actually binding the context of the object created using class React
+    */
+</script>
+</html>
