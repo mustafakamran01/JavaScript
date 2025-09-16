@@ -1,13 +1,13 @@
-// function myName(){
-//     console.log("K");
-//     console.log("a");
-//     console.log("m");
-//     console.log("r");
-//     console.log("a");
-//     console.log("n");
+function myName(){
+    console.log("K");
+    console.log("a");
+    console.log("m");
+    console.log("r");
+    console.log("a");
+    console.log("n");
     
-// }
-// myName()
+}
+myName()
 
 
 
@@ -92,13 +92,13 @@
 
 
 
-const myArr = [100, 200, 300, 400]
+// const myArr = [100, 200, 300, 400]
 
-function handleArray(getArray){
-    console.log(`Second element of the array is ${getArray[1]}`);
+// function handleArray(getArray){
+//     console.log(`Second element of the array is ${getArray[1]}`);
     
-}
-handleArray(myArr)
+// }
+// handleArray(myArr)
 /*
     we can also create an array while calling functions as we did in case of object
 */

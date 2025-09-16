@@ -8,11 +8,13 @@
 // const outsideTemp = null
 // let userEmail;
 
-// const id = Symbol('123')
-// const anotherId = Symbol('123')
+const id = Symbol('123')
+const anotherId = Symbol('123')
 
-// console.log(id === anotherId);
-
+console.log(id === anotherId);    
+/*
+    it will give false, because the value might be same , but the reference is different and symbol always contains unique values
+*/
 
 
 /*
@@ -67,8 +69,8 @@ let user2 = user1
 
 user2.email = "kamran@microsoft.com"
 
-console.log(user1.email);
-console.log(user2.email);
+// console.log(user1.email);
+// console.log(user2.email);
 
 
 

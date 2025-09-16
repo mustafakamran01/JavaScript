@@ -14,7 +14,7 @@ let myCreatedDate = new Date(2024, 2, 4, 9, 30)
 /*
     Here,
         2024 => year
-        2 => Month  // Index of month starts from 0 i.e, 2 is March
+        2 => Month  // Index of month starts from 0 that's why 2 is March
         4 => Date
         9 => Hour 
         30 => Minute

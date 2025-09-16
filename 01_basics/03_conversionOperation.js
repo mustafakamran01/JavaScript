@@ -18,7 +18,7 @@ console.log(typeof score);      // typeof null is object
 let scoreInNumber = Number(score)       
 
 console.log(typeof scoreInNumber);
- console.log(scoreInNumber);         // It will print 0
+console.log(scoreInNumber);         // It will print 0
 */
 
 
@@ -103,10 +103,10 @@ console.log(stringSomeNumber);
 
 // console.log(str3)
 
-// console.log("1" + 2)
-// console.log(1 + "2")
-// console.log("1" + 2 + 2);   //122        // if string is at first place, then it concatenate all the number or string
-// console.log(1 + 2 + "2");   //32         // if number is at first, then it perform addition and the concatenate with string
+console.log("1" + 2)
+console.log(1 + "2")
+console.log("1" + 2 + 2);   //122        // if string is at first place, then it concatenate all the number or string
+console.log(1 + 2 + "2");   //32         // if number is at first, then it perform addition and the concatenate with string
 
 
 // let num1, num2, num3
@@ -114,11 +114,11 @@ console.log(stringSomeNumber);
 // num1 = num2 = num3 = 2 + 2      // this is ok but not recommended. the code readability should be high
 
 
-x = 2, y = 3
+// x = 2, y = 3
 
-z = ++x + ++y
+// z = ++x + ++y
 
-console.table([z, x, y])
+// console.table([z, x, y])
 
 
 

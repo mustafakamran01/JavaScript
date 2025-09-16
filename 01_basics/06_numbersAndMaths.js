@@ -1,7 +1,7 @@
 const score = 400
 // console.log(score);
 
-// const balance = new Number(100)     // here we are explicitily creating a variable of number type
+const balance = new Number(100)     // here we are explicitily creating a variable of number type
 // console.log(balance);
 
 // console.log(balance.toString().length);
@@ -29,14 +29,14 @@ const hundreds = 1000000
 // console.log(`This will give the maximum number within the given numbers: ${Math.max(45, 6, 44, 78)}`);
 // console.log(`This will give the minimum number within the given numbers: ${Math.min(66, 87, 3, 2, 55)}`);
 
-console.log(Math.random());
-console.log((Math.random() * 10) + 1);
-console.log(Math.floor(Math.random() * 10) + 1);
+// console.log(Math.random());
+// console.log((Math.random() * 10) + 1);
+// console.log(Math.floor(Math.random() * 10) + 1);
 
 const max = 20
 const min = 10
 
-console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+// console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
 
 
