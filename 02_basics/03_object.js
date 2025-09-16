@@ -13,8 +13,11 @@ const jsUser = {
     lastLoginDays: ["Monday", "Thursday"]
 }
 
+// console.log(jsUser["age"]);
+// console.log(typeof jsUser["age"]);
+
 /*
-    Here all the keys are treated as string (name, full name, age, location, email, isLoggedIn, lastLoginDays)
+    Here all the keys are treated as string (name, full name, location, email, isLoggedIn, lastLoginDays)
 */
 
 // console.log(jsUser.name);

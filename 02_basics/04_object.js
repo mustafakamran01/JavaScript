@@ -28,12 +28,12 @@ const user = {
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
 
-// const objResult = Object.assign({}, obj1, obj2)
-// console.log(objResult);
+const resultObj = Object.assign({}, obj1, obj2)
+// console.log(resultObj);
 
 /*
-    Here we can combine more than two objects in a single object
-    {} is act as a target object, which is basically empty and,
+    Here we can combine more than two objects in a single object.
+    here, {} is act as a target object, which is basically empty and,
     other objects will act as a source object
 */
 
@@ -75,7 +75,7 @@ const info = [
     With the help of this we can get the keys or values of the given object in the form of array
 */
 
-// console.log(Object.entries(tinderUser));
+console.log(Object.entries(tinderUser));
 /*
     With the help of this we can get the arrays of key value pairs present in the object
 */

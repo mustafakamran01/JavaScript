@@ -16,6 +16,9 @@ const dc_heros = ["superman", "flash", "batman"]
 // const anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
 // const realAnotherArray = anotherArray.flat(Infinity)
 // console.log(realAnotherArray);
+/*
+    it will flatten the elements of array in one single array
+*/
 
 
 // console.log(Array.isArray("Kamran"));
