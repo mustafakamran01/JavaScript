@@ -9,12 +9,16 @@ const balance = new Number(100)     // here we are explicitily creating a variab
 
 const newNumber = 123.867
 
-// console.log(newNumber.toPrecision(4));      // it will give the precise value of the given number upto the give number of digits
+// console.log(newNumber.toPrecision(3));
+/*
+    It will give the precise value of the given number upto the give number of digits,
+    and it will return a string value
+*/
 
-const hundreds = 1000000
+const hundreds = 10000000
 
-// console.log(hundreds.toLocaleString('en-IN'));      // it will represent the number using comma in Indian style
 // console.log(hundreds.toLocaleString());         // it will represent the number using comma in US style
+// console.log(hundreds.toLocaleString('en-IN'));      // it will represent the number using comma in Indian style
 
 
 
@@ -30,13 +34,26 @@ const hundreds = 1000000
 // console.log(`This will give the minimum number within the given numbers: ${Math.min(66, 87, 3, 2, 55)}`);
 
 // console.log(Math.random());
+/*
+    Math.random() generally gives value between 0 to 1.
+*/
+
 // console.log((Math.random() * 10) + 1);
+/*
+    It will give random values between 1 to 10.
+*/
+
 // console.log(Math.floor(Math.random() * 10) + 1);
+/*
+    It will give lowest rounded value.
+*/
 
 const max = 20
 const min = 10
-
-// console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+/*
+    It is a formula to get random value in the given range
+*/
 
 
 
