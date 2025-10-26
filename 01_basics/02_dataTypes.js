@@ -25,3 +25,4 @@ let state = null
 
 console.log(typeof undefined)  //undefined
 console.log(typeof null)       //object
+
