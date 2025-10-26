@@ -35,9 +35,9 @@
 // }
 
 
-//**********************************Nullish Coalescing Operator (??) : null undefined*******************************//
+//********************************* Nullish Coalescing Operator (??) : null undefined ******************************//
 
-// let val1;
+let val1;
 
 // val1 = 5 ?? 10
 // val1 = null ?? 40
@@ -45,18 +45,17 @@
 // val1 = null ?? 10 ?? 20
 // val1 = null ?? undefined
 
-// /*
-//     nullish operator will compare the values that are given, if the given values are null or undefined, they check the other value,
-//     if the other value is also null or undefined, then it will give undefined
-// */
-
-// console.log(val1);
+/*
+    Nullish operator will compare the values that are given, if the given values are null or undefined, they check the other value,
+    if the other value is also null or undefined, then it will give undefined
+*/
+console.log(val1);
 
 
 
 /****************************************** Terniary Operator ****************************************/
 
-const coffeePrice = 150
+// const coffeePrice = 150
 
-coffeePrice >= 100 ? console.log("Coffee is expensive") : console.log("Coffee is affordable");
+// coffeePrice >= 100 ? console.log("Coffee is expensive") : console.log("Coffee is affordable");
 

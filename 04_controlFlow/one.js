@@ -1,4 +1,4 @@
-/* if and else statement */
+/****************************** if and else statement ******************************/
 
 // const temperature = 47
 
