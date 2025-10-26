@@ -6,12 +6,15 @@
 // const scoreValue = 100.3
 // const isLoggedIn = false
 // const outsideTemp = null
+
 // let userEmail;
+// console.log(typeof userEmail);      // undefined
+
 
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);    
+// console.log(id === anotherId);    
 /*
     it will give false, because the value might be same , but the reference is different and symbol always contains unique values
 */
@@ -36,12 +39,19 @@ console.log(id === anotherId);
     
 // }
 
+let myFunc = function(){
+    console.log("Revision of JS");
+    
+}
+// console.log(myFunc);        // It will give reference of the function
+// myFunc();               // It will actually call the function;
+
 // console.log(typeof colours);        // object
 // console.log(typeof myObj);          // object
 // console.log(typeof myFunction);     // function
 
 
-//**********************************************Memory********************************************//
+//********************************************** Memory ********************************************//
 
 /*
     Primitive data type uses Stack memory and Non primitive data type uses heap memory.
@@ -61,16 +71,19 @@ console.log(id === anotherId);
 
 
 let user1 = {
-    email: "kamran@google.com",
-    name: "Kamran",
+    name: "Mustafa",
+    email: "mustafa@google.com"
 }
 
 let user2 = user1
 
 user2.email = "kamran@microsoft.com"
+/*
+    It will change the value in both the object
+*/
 
-// console.log(user1.email);
-// console.log(user2.email);
+console.log(user1.email);
+console.log(user2.email);
 
 
 
