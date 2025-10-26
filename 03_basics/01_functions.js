@@ -25,6 +25,7 @@ const myFirstName = function (){
 */
 
 
+
 // function addTwoNumber(num1, num2){
 //     return (num1 + num2);
 // }
@@ -32,15 +33,16 @@ const myFirstName = function (){
 // console.log(`Sum of given two number is: ${result}`);
 
 
-function userLoginMessage(userName){
-    if (!userName) {
-        console.log("Please enter a username.");
-        return;
-    } 
-    return `${userName} just logged in.`
-}
-console.log(userLoginMessage());
-console.log(userLoginMessage("Mustafa Kamran"));
+
+// function userLoginMessage(userName){
+//     if (!userName) {
+//         console.log("Please enter a username.");
+//         return;
+//     } 
+//     return `${userName} just logged in.`
+// }
+// console.log(userLoginMessage());
+// console.log(userLoginMessage("Mustafa Kamran"));
 /*
     If a parameters is not provided by the user, then it is considered as undefined
 */
@@ -53,7 +55,7 @@ console.log(userLoginMessage("Mustafa Kamran"));
 // console.log(userLoginMessage());
 // console.log(userLoginMessage("Kamran"));
 /*
-    here shark is considered as a default value, if user doesnot provide any parameters, but
+    Here shark is considered as a default value, if user doesnot provide any parameters, but
 */
 
 
@@ -71,31 +73,32 @@ console.log(userLoginMessage("Mustafa Kamran"));
 
 
 // function calculateCartPrice(val1, val2, ...num){
+//     console.log(val1 + val2);
 //     return num
 // }
-// console.log(calculateCartPrice(200, 450, 430, 999, 560));
+// console.log(calculateCartPrice(200, 450, 430, 999, 560, 200, 780, 444));
 /*
-    in this case the 1st argument will be collected by val1, and 2nd argument will be collected by val2, and
-    rest of the arguments are collected by num
+    In this case the 1st argument will be collected by val1, and 2nd argument will be collected by val2, and
+    rest of the arguments are collected by num and bundled it in an array.
 */
 
 
 
-// const course = {
-//     courseName: "JavaScript",
-//     price: 999
+// const myCar1 = {
+//     name: "Virtus",
+//     price: 1800000
 // }
 
-// function handleObject(anyObject){
-//     console.log(`Name of the car is ${anyObject.carName} and price of the car is ${anyObject.price}`);
-    
+// function carInfo(anyObject){
+//     return `Name of the car is ${anyObject.name} and price of car is ${anyObject.price}`
 // }
-// handleObject(course)
+// // console.log(carInfo(myCar1));
 
-// handleObject({
-//     carName: "Skoda Kodiaq",
-//     price: 4500000
-// })
+// console.log(carInfo({
+//     name: "Seltos",
+//     price: 2000000
+// }));
+
 /*
     here we can create an object while calling the function
 */
@@ -109,6 +112,8 @@ console.log(userLoginMessage("Mustafa Kamran"));
     
 // }
 // handleArray(myArr)
+
+// handleArray([1, 2, 3, 5, 6, 7, 8])
 /*
     we can also create an array while calling functions as we did in case of object
 */
