@@ -1,3 +1,5 @@
+/******************************** Let, Var, Const ***************************/
+
 // var c = 300
 
 // let a = 100
@@ -10,39 +12,31 @@
 //     var c = 30
 
 //     console.log("INNER: ", a);
-
+//     console.log("INNER: ", b);
+//     console.log("INNER: ", c);
 // }
 
-// console.log(c);
-// console.log(a);
-// console.log(b);
+// console.log("OUTTER: ", a);
+// console.log("OUTTER: ", b);
+// console.log("OUTTER: ", c);
 
 /*
-    the global scope that we use in console of web page is different from the global scope that we use in node environment      
+    The global scope that we use in console of web page is different from the global scope that we use in node environment      
 */
 
 
 
+
 // function one(){
-//     const userName = "Kamran"
+//     const userName = "Mustafa Kamran"
 
 //     function two(){
 //         const codeEditor = "VS Code"
-//         console.log(`User name is ${userName}`);
-        
+//         console.log(`My name is ${userName} and I use ${codeEditor}`);
 //     }
-
-//     // console.log(codeEditor);
-//     /*
-//         we cannot access variables which are defined inside a scope,
-//         here one() acts as a global scope for two(), so we can access all the variables of one() inside two(), but
-//         we cannot access two() variables in one()
-//     */
-
-//     two()
-    
+//     two();
 // }
-// one()
+// one();
 
 
 
@@ -55,31 +49,29 @@
 //         console.log(`User name is ${userName} and code editor is ${codeEditor}`);
 //     }
 
-//     // console.log(codeEditor);
+//     console.log(codeEditor);
     
 // }
 
-// // console.log(userName);
+// console.log(userName);
 
 
 
-//******************************************Interesting****************************************//
+//***************************************** Interesting ***************************************//
 
-
-const result = addOne(5)
-function addOne(num){
-    return num + 1
-}
-console.log(result);
+// const result = addOne(5)
+// function addOne(num){
+//     return num + 1
+// }
+// console.log(result);
 
 
 
 addTwo(5)
 const addTwo = function(num){
     return num + 2
-
 }
 /*
-    Here it gives error while calling addTwo() before defining because that function is stored in a variable, whereas
-    addOne() is not giving error while calling it before it's defination
+Here it gives error while calling addTwo() before defining because that function is stored in a variable, whereas
+addOne() is not giving error while calling it before it's defination
 */
