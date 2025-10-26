@@ -1,4 +1,4 @@
-function myName(){
+function myLastName(){
     console.log("K");
     console.log("a");
     console.log("m");
@@ -7,32 +7,42 @@ function myName(){
     console.log("n");
     
 }
-myName()
+// myLastName()
 
-
-
-// function addTwoNumber(number1, number2){
-//     console.log(number1 + number2);
-//     return number1 + number2
-
-// }
-// const result = addTwoNumber(34, 56)
-// console.log(`Result of addition of given two number ${result}`);
-
-
-
-// function userLoginMessage(userName){
-//     if(!userName){
-//         console.log("Please enter a username");
-//         return
-        
-//     }
-//     return `${userName} just logged in`
-// }
-// console.log(userLoginMessage("Mustafa Kamran"))
-// console.log(userLoginMessage());
+const myFirstName = function (){
+    console.log("M");
+    console.log("U");
+    console.log("S");
+    console.log("T");
+    console.log("A");
+    console.log("F");
+    console.log("A");
+    
+}
+// myFirstName();
 /*
-    if a parameters is not provided by the user, then it is considered as undefined
+    Both ways are correct to create a function
+*/
+
+
+// function addTwoNumber(num1, num2){
+//     return (num1 + num2);
+// }
+// const result = addTwoNumber(10, 20);
+// console.log(`Sum of given two number is: ${result}`);
+
+
+function userLoginMessage(userName){
+    if (!userName) {
+        console.log("Please enter a username.");
+        return;
+    } 
+    return `${userName} just logged in.`
+}
+console.log(userLoginMessage());
+console.log(userLoginMessage("Mustafa Kamran"));
+/*
+    If a parameters is not provided by the user, then it is considered as undefined
 */
 
 
