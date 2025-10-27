@@ -1,4 +1,4 @@
-/***************************************** For Loop******************************************/
+/***************************************** For Loop *****************************************/
 
 // for (let i = 0; i <= 10; i++) {
     
@@ -34,6 +34,7 @@
 //         console.log(`${i} * ${j} = ${i*j}`);
         
 //     }
+//     console.log()
 // }
 
 
@@ -64,12 +65,12 @@
 
 
 
-for (let index = 1; index <= 20; index++) {
+// for (let index = 1; index <= 20; index++) {
     
-    if (index == 5) {
-        console.log(`Detected ${index}`);
-        continue
-    }
+//     if (index == 5) {
+//         console.log(`Detected ${index}`);
+//         continue
+//     }
 
-    console.log(`Current value is ${index}`);
-}
+//     console.log(`Current value is ${index}`);
+// }
