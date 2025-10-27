@@ -84,7 +84,6 @@
 
 
 
-// const myObj = () => ({userName: "Mustafa Kamran"})
 const myObj = () => ({userName: "Mustafa Kamran"})
 /*
     When we return an object using an implicit return, then we need to wrap our object into a paranthesis
