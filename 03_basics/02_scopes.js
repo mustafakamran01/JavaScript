@@ -72,6 +72,6 @@ const addTwo = function(num){
     return num + 2
 }
 /*
-Here it gives error while calling addTwo() before defining because that function is stored in a variable, whereas
-addOne() is not giving error while calling it before it's defination
+    Here it gives error while calling addTwo() before defining because that function is stored in a variable, whereas
+    addOne() is not giving error while calling it before it's defination
 */
