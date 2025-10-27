@@ -7,7 +7,6 @@ const myObject = {
     vw: "Virtus"
 }
 
-
 // for (const key in myObject){
 //     console.log(key);
 // }
@@ -46,9 +45,9 @@ map.set("Bihar", "Patna")
 map.set("UP", "Lucknow")
 map.set("West Bengal", "Kolkata")
 
-for(const key in map){
-    console.log(key);
-}
+// for(const key in map){
+//     console.log(key);
+// }
 /*
     It will print nothing, because maps are not iterable using for in loops
 */
