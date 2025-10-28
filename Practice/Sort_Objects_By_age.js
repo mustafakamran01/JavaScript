@@ -1,20 +1,20 @@
 /*
-We need to sort an array of objects by their age property in ascending order.
+  We need to sort an array of objects by their age property in ascending order.
 
-Example:
-Input:
-[
-  { name: "Kamran", age: 30 },
-  { name: "Ali", age: 25 },
-  { name: "Rehan", age: 28 }
-]
+  Example:
+  Input:
+  [
+    { name: "Kamran", age: 30 },
+    { name: "Ali", age: 25 },
+    { name: "Rehan", age: 28 }
+  ]
 
-Output:
-[
-  { name: "Ali", age: 25 },
-  { name: "Rehan", age: 28 },
-  { name: "Kamran", age: 30 }
-]
+  Output:
+  [
+    { name: "Ali", age: 25 },
+    { name: "Rehan", age: 28 },
+    { name: "Kamran", age: 30 }
+  ]
 */
 
 let myArr = [
