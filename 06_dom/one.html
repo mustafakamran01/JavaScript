@@ -31,8 +31,8 @@
 </html>
 
 <!-- 
-    innerText shows the content that are display to the users
-    whereas, textContent shows the content that may not be visible on display to the user by hiding some content with the help of style tag or CSS  
+    innerText shows the content that are display to the users  whereas, 
+    textContent shows the content that may not be visible on display to the user by hiding some content with the help of style tag or CSS  
 
     innerHTML shows the content as well as the HTML tags if used 
 -->
@@ -43,25 +43,57 @@
  -->
 
 <!-- 
-document.getElementById('title')        // We get element of id = title
-document.getElementById('title').id     // We get the id of the given element
-document.getElementById('title').className     // We get the class name of the element
-document.getElementById('title').getAttribute   // We get the attribute of the element
-document.getElementById('title').getAttribute('id')     // We get the id of the element
-document.getElementById('title').getAttribute('class')  // We get the class of the element
-document.getElementById('title').setAttribute('class', 'test') // We are updating the class of the element
-const title = document.getElementById('title')      // Here we are storing element in a variable
-title.style.backgroundColor = 'blue'        // We can add styling to the element
-title.textContent             // We get the whole text, even those which might not be visible to end user
-title.innerText         // We get the text which are visible to end user only
-document.querySelector('h2')        // We will get the first h2 element
-document.querySelector('#title')    // We will get the element of id = title
-document.querySelector('.heading')  / We will get the element of class name = heading
+document.getElementById('title')        
+// We get element of id = title
+
+document.getElementById('title').id     
+// We get the id of the given element
+
+document.getElementById('title').className     
+// We get the class name of the given element
+
+document.getElementById('title').getAttribute   
+// We get the attribute of the given element
+
+document.getElementById('title').getAttribute('id')
+// We get the id of the given element
+
+document.getElementById('title').getAttribute('class')
+// We get the class name of the given element
+
+document.getElementById('title').setAttribute('class', 'test')
+// we are updating class name of the given element
+
+const title = document.getElementById('title')
+// Here we are storing element in a variable
+
+title.style.backgroundColor = 'blue'
+// We can add styling to the element
+
+title.textContent
+// We get the whole text, even those which might not be visible to the end user
+
+title.innerText         
+// We get the text which are visible to end user only
+
+document.querySelector('h2')        
+// We will get the first h2 element
+
+document.querySelector('#title')    
+// We will get the element of id = title
+
+document.querySelector('.heading')  
+// We will get the element of class name = heading
+
 document.querySelector('ul').querySelector('li').style.backgroundColor = "blue"     
-// Here we are selecting first list item of unordered list and changing it's background color
+// Here we are selecting first list item of first un-ordered list and changing it's background color
+
 document.querySelector('ul').querySelector('li').innerHTML = "1"
 // Here we are changing inner HTML of the selected element
+
 const tempList = document.querySelectorAll('li')        
 // Here we will get a nodeList, that's why we cannot use all the properties of array like maps, but we can use forEach loop
-document.getElementsByClassName('list-item')    // We will get a HTML collection
+
+document.getElementsByClassName('list-item')    
+// We will get a HTML collection
 -->
