@@ -1,3 +1,5 @@
+/* We need to filter and store only those values which are greater than 50 */
+
 const myObj = {
     a: 30,
     b: 60,
