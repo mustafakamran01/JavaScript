@@ -16,9 +16,9 @@
 <script>
     const weeks = document.querySelector('.parent')
     // console.log(weeks);
-    // console.log(weeks.children);       // We will get a HTML collections
-    // console.log(weeks.children[2]);
-    // console.log(weeks.children[2].innerHTML);
+    // console.log(weeks.children);                     // We will get a HTML collections
+    // console.log(weeks.children[2]);                  // <div class = "day">Tuesday</div>
+    // console.log(weeks.children[2].innerHTML);        // Tuesday
     
     // for (let i = 0; i < weeks.children.length; i++){
     //     console.log(weeks.children[i].innerHTML);
@@ -29,10 +29,10 @@
 
     weeks.children[2].style.color = 'brown'
 
-    // console.log(weeks.firstElementChild);       
+    // console.log(weeks.firstElementChild);            // <div class = "day">Monday</div> 
     /* We will get the first child element of the given element */
 
-    // console.log(weeks.lastElementChild);
+    // console.log(weeks.lastElementChild);             // <div class = "day">Thursday</div>
     /* We will get the last child element of the given element */
 
     /* Here we are moving from parent element to child element */
@@ -42,13 +42,13 @@
     const dayOne = document.querySelector('.day')
     // Here we are selecting first element of class name = day
 
-    console.log(dayOne);
+    console.log(dayOne);                    // <div class = "day">Monday</div>
 
 
     console.log(dayOne.parentElement);
     /* Here we are getting parent element of the given element */
 
-    console.log(dayOne.nextElementSibling);
+    console.log(dayOne.nextElementSibling);             // <div class = "day">Tuesday</div>
     /* Here we will get the next sibling element of the given element */
     
     
@@ -56,7 +56,6 @@
     /* 
         Here we get all the nodes which are divs, children elements, and
         spaces also counted as child nodes.
-    
     */
     
 
