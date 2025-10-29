@@ -1,40 +1,50 @@
-const randomNumber = parseInt(Math.random() * 100 + 1);
+const max = 100
+const min = 1
+let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
-const userInput = document.querySelector('#guessField');
-const submit = document.querySelector('#subt');
-const guessSlot = document.querySelector('.guesses');
-const guessRemaining = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
+const submit = document.querySelector('#subt')
 
-const p = document.createElement('p');
+const prevGuess = document.querySelector('.guesses')
 
-let prevGuess = [];
+const guessRemaining = document.querySelector('.lastResult')
 
-let numGuess = 1;
+const result = document.querySelector('.lowOrHi')
 
+let oldGuess = [];
 let playGame = true;
+let numberOfRemaining = 10;
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-  const guess = parseInt(userInput.value);
 
-  if (guess <= 0 || guess > 100) {
-    alert('Please enter a number between 1 to 100');
-  } else if (isNaN(guess)) {
-    alert('Please enter a valid number');
-  } else {
-    prevGuess.push(guess);
-  }
+  const guessField = Number(document.querySelector('.guessField').value)
 
-  if (numGuess > 10) {
-    lowOrHi.innerHTML = `Game Over. Random number was ${randomNumber}`;
+  if (playGame) {
+    if (guessField < 1 || guessField > 100) {
+    result.innerHTML = "Please enter a number between 1 to 100"
+  } else if (isNaN(guessField)) {
+    result.innerHTML = "Please enter a valid number"
   } else {
-    if (guess === randomNumber) {
-      lowOrHi.innerHTML = `Congratulations!!!, your guess is right ${guess}`;
-    } else if (guess < randomNumber) {
-      lowOrHi.innerHTML = 'Number is TOO less';
-    } else {
-      lowOrHi.innerHTML = 'Number is TOO high';
+    oldGuess.push(guessField)
+    prevGuess.innerHTML = oldGuess;
+    if (numberOfRemaining > 0) {
+      if (guessField > randomNumber) {
+        result.innerHTML = "Too high"
+      } else if (guessField < randomNumber) {
+        result.innerHTML = "Too low"
+      } else if (guessField == randomNumber) {
+        result.innerHTML = "Congratulation!! You won the game"
+        playGame = false;
+      }
+    }
+
+    numberOfRemaining--;
+    guessRemaining.innerHTML = numberOfRemaining;
+
+    if (numberOfRemaining == 0) {
+      result.innerHTML = `Sorry!! You lost. Random number is ${randomNumber}`
+      playGame = false;
     }
   }
-});
+  }
+})
