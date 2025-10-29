@@ -11,33 +11,31 @@
 <script>
 
     const myH1 = document.createElement('h1')
-    console.log(myH1);
     myH1.className = "first"
     myH1.id = Math.round(Math.random() * 10 + 1)
     myH1.setAttribute('title', 'h1 title')
-    myH1.style.color = 'brown'
     myH1.style.backgroundColor = 'white'
-    myH1.style.padding = '8px'
+    myH1.style.color = 'brown'
+    myH1.style.padding = '10px'
     myH1.innerText = 'JOB PREPARATION'
 
     document.body.appendChild(myH1)
-    
 
-
+    /*
+        Both are correct ways of creating elements, but
+        the below one is considered more optimized
+    */
 
     const myDiv = document.createElement('div')
-    console.log(myDiv);
-    myDiv.className = "main"
+    myDiv.className = 'main'
     myDiv.id = Math.round(Math.random() * 10 + 1)
     myDiv.setAttribute('title', 'generated title')
-    myDiv.style.backgroundColor = 'green'
-    myDiv.style.padding = "12px"
-    myDiv.style.color = "white"
-    const text = document.createTextNode("JavaScript + React")
-    myDiv.appendChild(text)
+    myDiv.style.backgroundColor = 'blue'
+    myDiv.style.color = 'white'
+    myDiv.style.padding = '10px'
+    myDiv.appendChild(document.createTextNode('JavaScript + React'))
 
     document.body.appendChild(myDiv)
-
 
 </script>
 </html>
