@@ -20,52 +20,70 @@
 
     <script>
 
-        // document.getElementById('owl').onclick = function(){
+        // document.querySelector('#owl').onclick = () => {
         //     alert("Owl clicked")
         // }
-        //this method is not recommended
+        /* This approach is not recommended */
 
-        // objects of eventListener:-
-            // type, timestamp, defaultPrevented
-            // target, toElement, srcElement, currentTarget,
-            // clientX, clientY, screenX, screenY
-            // altkey, ctrlkey, shiftkey, keyCode
 
-        // document.getElementById('images').addEventListener('click', (e) => {
-        //     console.log("Clicked inside the URL");
-            
-        // }, false)
 
-        // document.getElementById('owl').addEventListener('click', (e) => {
-        //     console.log("Clicked on owl");
-        //     e.stopPropagation()         // it will stop propagation i.e, when we click on owl, it will print "Clicked on owl, but further it will not print "Clicked inside the URL"
-        // }, false)
-        
         /*
-        event propagation: 
-            false = Bubbling (bottom to top) i.e, when we click on owl, first it will print "Clicked on owl", and then it will print ("Clicked inside the URL")
-            true = Capturing (top to bottom) i.e, when we click on owl, first it will print "Clicked inside the URL", and then it will print ("Clicked on owl") 
-
-            default value is false
+        Object of eventListner:
+            -> type, timeStamp, defaultPrevented
+            -> target, toElement, srcElement, currentTarget
+            -> clientX, clientY, screenX, screenY
+            -> altkey, ctrlkey, shiftkey, keyCode
         */
 
-        // document.getElementById('google').addEventListener('click', (e) => {
-        //     e.preventDefault()
+
+
+    //    document.querySelector('#images').addEventListener('click', (e) => {
+    //        console.log("Clicked inside UL");
+    //    }, true)
+
+        // document.querySelector('#owl').addEventListener('click', (e) => {
+        //     console.log("Owl clicked");
+        //     // e.stopPropagation(); 
+        //     /* 
+        //         It will stop propagation i.e, when we click on owl, it will print "Owl clicked", but 
+        //         further it will not print "Clicked inside the URL", only if event propagation is false(bubbling).
+        //     */
+        // }, true)
+
+
+        /*
+            event propagation:  Here we are click on owl photo
+                false -> bubbling (bottom to top) : It will first print "Owl clicked" and then, 
+                         it will print "Clicked inside the UL"
+
+                true -> capturing (top to bottom) : It will first print "Click inside UL" and then,
+                         it will print "Owl clicked"
+        */
+
+
+
+        // document.querySelector('#google').addEventListener('click', (e) => {
+        //     e.preventDefault();
+        //     /* 
+        //         It will stop redirecting to google.com 
+        //         The main goal of e.preventDefault() is to stop the default behaviour i.e, redirecting, form submission etc.
+        //     */
         //     console.log("Google clicked");
-        //     e.stopPropagation()
         // }, false)
 
 
-        document.getElementById('images').addEventListener('click', (e) => {
-            console.log(e);
-            console.log(e.target.tagName);
-
+        
+        document.querySelector('#images').addEventListener('click', (e) => {
+            console.log(e.target.parentNode)
             if (e.target.tagName === 'IMG') {
-                e.target.parentNode.remove()
+                e.target.parentNode.remove();
             }
-            
+            /*
+                Here we are accessing the parent node of the target because,
+                target is image, but we need to remove the list so, 
+                that's why we first need to move to parentNode i.e, list then remove it
+            */
         })
-
 
     </script>
 </body>
