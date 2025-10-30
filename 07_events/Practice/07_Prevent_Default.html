@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default</title>
+</head>
+<body style="color: #414141;">
+    <h3>Prevent a form from refreshing the page when submitted, and instead print "Form submitted!" to console.</h3>
+</body>
+<script>
+
+    // creating div element
+    const myDiv = document.createElement('div')
+    myDiv.id = 'main'
+    myDiv.style.backgroundColor = "#414141"
+    myDiv.style.color = "white"
+    myDiv.style.padding = "100px"
+    
+    // Appending div to body
+    document.body.appendChild(myDiv)
+    
+    // Creating form element
+    const myForm = document.createElement('form')
+    myForm.id = "myForm"
+    
+    // Appending form to div
+    myDiv.appendChild(myForm)
+
+    // Creating form labels and submit button
+    const myLabel1 = document.createElement('label')
+    myLabel1.appendChild(document.createTextNode("Name:"))
+
+    const myInput1 = document.createElement('input')
+    myInput1.id = "name"
+    myInput1.setAttribute("type", "text")
+
+    const myBr1 = document.createElement('br')
+
+    const myLabel2 = document.createElement('label')
+    myLabel2.appendChild(document.createTextNode("Email:"))
+    myLabel2.style.marginTop = "15px"
+    
+    const myInput2 = document.createElement('input')
+    myInput2.id = "email"
+    myInput2.setAttribute('type', 'email')
+
+    const myBr2 = document.createElement('br')
+    
+    const myButton = document.createElement('button')
+    myButton.setAttribute('type', 'submit')
+    myButton.id = 'button'
+    myButton.appendChild(document.createTextNode("Submit"))
+    
+    
+    // Appending all the labels and buttons to form
+    myForm.appendChild(myLabel1)
+    myForm.appendChild(myInput1)
+    myForm.appendChild(myBr1)
+    myForm.appendChild(myLabel2)
+    myForm.appendChild(myInput2)
+    myForm.appendChild(myBr2)
+    myForm.appendChild(myButton)
+
+
+    // Prevent form to submit to server
+    myForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log("Form submitted");
+    })
+    
+    
+</script>
+</html>
