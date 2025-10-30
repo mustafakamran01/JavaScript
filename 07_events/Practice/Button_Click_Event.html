@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Event</title>
+</head>
+<body style="color: bisque;">
+    
+</body>
+
+<script>
+
+    const button = document.createElement('button')
+    button.className = 'main'
+    button.id = Math.floor(Math.random() * 10 + 1)
+    button.appendChild(document.createTextNode("Click me"))
+    button.style.color = "bisque"
+    button.style.backgroundColor = "#414141"
+    
+    document.body.appendChild(button)
+
+    button.addEventListener('click', (e) => {
+        alert("Button clicked!!")
+    })
+
+</script>
+
+</html>
