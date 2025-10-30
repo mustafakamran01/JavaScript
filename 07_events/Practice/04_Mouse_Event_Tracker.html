@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Tracker</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    const myDiv = document.createElement('div')
+    myDiv.className = "main"
+    myDiv.id = Math.floor(Math.random() * 10 + 1)
+    myDiv.style.backgroundColor = "blue"
+    myDiv.style.padding = "30px"
+
+    document.body.appendChild(myDiv)
+
+    const myH1 = document.createElement('h1')
+    myH1.className = "first"
+    myH1.id = Math.floor(Math.random() * 10 + 1)
+    myH1.style.color = "white"
+
+    myDiv.appendChild(myH1)
+
+    myDiv.addEventListener('mouseenter', (e) => {
+        myH1.innerHTML = "Mouse Entered"
+    })
+
+    myDiv.addEventListener('mouseleave', (e) => {
+        myH1.innerHTML = "Mouse Left"
+    })
+
+    
+
+</script>
+</html>
