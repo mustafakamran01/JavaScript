@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Click Detector</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    const paragraph = document.createElement('p')
+    paragraph.className = "main"
+    paragraph.id = Math.floor(Math.random() * 10 + 1)
+    paragraph.style.color = "#414141"
+    paragraph.appendChild(document.createTextNode("This is a paragraph, and it changes color to red when you click on it"))
+    
+    document.body.appendChild(paragraph)
+
+
+    paragraph.addEventListener('dblclick', (e) => {
+        paragraph.style.color = "red"
+    })
+
+</script>
+</html>
