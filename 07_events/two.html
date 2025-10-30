@@ -5,39 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Async</title>
 </head>
-<body>
+<body style="background-color: #212121; color: antiquewhite;">
     <h1>Chai aur code</h1>
     <button id="stop">Stop</button>
 </body>
 <script>
+
+    /* It will print the code for one time after the given time i.e, 4sec */
+
     // setTimeout( () => {
     //     console.log("Mustafa Kamran");
-        
-    // }, 3000)
-    // it will print the code for one time after given time i.e, 3sec 
+    // }, 4000)
+    
+
+
+    /* Here we are creating a function and giving it reference to the setTimeout */
 
     function sayMyName(){
-        console.log("Mustafa Kamran");
-        
+        console.log("My name is Mustafa Kamran");
+    }
+    setTimeout(sayMyName, 3000)
+
+
+
+    /* This is how we setTimeout and clearTimeout */
+
+    function changeH1Text(){
+        document.querySelector('h1').innerHTML = "Software Developer"
+        console.log("Text changed");
     }
 
-    function changeText(){
-        document.querySelector('h1').innerHTML = 'Software Developer'
-    }
+    let refTimeOut = setTimeout(changeH1Text, 3000)
 
-    const refTimeOut = setTimeout(changeText, 5000)
-
-    document.querySelector('button').addEventListener('click', (e) => {
+    document.querySelector('#stop').addEventListener('click', (e) => {
         clearTimeout(refTimeOut)
-        console.log("Event stopped");
-        
+        console.log("Set timeout is stopped");
     })
-    // this is how we apply a clearTimeOut function to stop a setTimout function
-
-
-
-
-
+    
+    console.log("Asyn programming");
 
 </script>
 </html>
