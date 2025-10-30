@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    const button = document.createElement('button')
+    button.className = "main"
+    button.id = Math.floor(Math.random() * 10 + 1)
+    button.style.backgroundColor = "#414141"
+    button.style.color = "white"
+    button.appendChild(document.createTextNode("Click me"))
+
+    document.body.appendChild(button)
+
+    function generateColor(){
+
+        let hexValue = "0123456789ABCDEF"
+        let color = "#"
+
+        for(let i = 0; i < 6; i++) {
+            let randomNumber = Math.floor(Math.random() * 16);
+            color += hexValue.charAt(randomNumber);
+        }
+        return color;
+    }
+
+    button.addEventListener('click', (e) => {
+        document.body.style.backgroundColor = generateColor();
+    })
+
+</script>
+
+</html>
