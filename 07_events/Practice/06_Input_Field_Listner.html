@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Field Listner</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    const input = document.createElement('input')
+    input.id = Math.floor(Math.random() * 10 + 1)
+    input.className = "main"
+    input.setAttribute('type', 'text')
+    input.setAttribute('placeholder', 'Enter you text')
+    input.style.backgroundColor = "#414141"
+    input.style.color = "white"
+    input.style.padding = "13px"
+
+    document.body.appendChild(input)
+
+
+    const myPara = document.createElement('p')
+    myPara.className = "first"
+    myPara.id = Math.floor(Math.random() * 10 + 1)
+    myPara.style.backgroundColor = "blue"
+    myPara.style.color = "white"
+    myPara.style.padding = "10px"
+
+    document.body.appendChild(myPara)
+
+
+    input.addEventListener('input', (e) => {
+        myPara.innerHTML = input.value;
+    })
+
+</script>
+</html>
