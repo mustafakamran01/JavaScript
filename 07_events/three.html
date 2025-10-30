@@ -12,24 +12,29 @@
 </body>
 <script>
 
-    const sayDate = (name) => {
-        console.log(`My name is ${name}, and current date is ${Date.now()}`);
-        
+    /* 
+        Here we are creating a functionality in which,
+        if I click on start button, it should start printing name and date, and
+        if i click on stop button, then it should stop printing
+    */
+
+    let refInterval = null;
+
+    function sayMyNameAndDate(){
+        console.log(`My name is Mustafa Kamran and current time is ${new Date().toLocaleTimeString()}`);
     }
 
-    let refSetInterval;
-
     document.querySelector('#start').addEventListener('click', (e) => {
-        // refSetInterval()
-        if(refSetInterval == null){
-            refSetInterval = setInterval(sayDate, 1000, 'Mustafa Kamran')
+        if (refInterval === null) {
+            refInterval = setInterval(sayMyNameAndDate, 1000)
         }
     })
 
     document.querySelector('#stop').addEventListener('click', (e) => {
-        clearInterval(refSetInterval)
-        refSetInterval = null;
+        clearInterval(refInterval)
+        refInterval = null;
     })
+    
 
     
 </script>
