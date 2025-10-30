@@ -37,17 +37,18 @@
 
 
 
-    //    document.querySelector('#images').addEventListener('click', (e) => {
-    //        console.log("Clicked inside UL");
-    //    }, true)
+        // document.querySelector('#images').addEventListener('click', (e) => {
+        //     console.log("Clicked inside UL");
+        // }, true)
 
         // document.querySelector('#owl').addEventListener('click', (e) => {
         //     console.log("Owl clicked");
         //     // e.stopPropagation(); 
-        //     /* 
-        //         It will stop propagation i.e, when we click on owl, it will print "Owl clicked", but 
-        //         further it will not print "Clicked inside the URL", only if event propagation is false(bubbling).
-        //     */
+            /* 
+                It will stop propagation i.e, when we click on owl, it will print "Owl clicked", but 
+                further it will not print "Clicked inside the URL", only if event propagation is false(bubbling).
+                If the event propagation is true, then e.stopPropagation() will not work
+            */
         // }, true)
 
 
@@ -73,6 +74,7 @@
 
 
 
+        /* Here the task is that, whenever we click on any list-item, that list should get removed */
         document.querySelector('#images').addEventListener('click', (e) => {
             console.log(e.target.parentNode)
             if (e.target.tagName === 'IMG') {
