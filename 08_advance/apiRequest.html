@@ -66,55 +66,78 @@
     </tr>
 </table>
 <br>
-<button id="info">About user</button>
-<div id="output"></div>
 <br>
 
 </body>
 <script>
-    // const requestURL = "https://api.github.com/users/hiteshchoudhary"
+    
+    let data;
 
-    // let data;
+    const requestURL = "https://api.github.com/users/hiteshchoudhary"
 
-    // const xhr = new XMLHttpRequest()
-    // xhr.open('GET', requestURL)
-    // xhr.onreadystatechange = () => {
-    //     console.log(xhr.readyState);
-    //     if(xhr.readyState === 4){
-    //         data = JSON.parse(xhr.responseText) // this will return a string value, so here we are converting string to JSON value
-    //         console.log(typeof data)
-    //         console.log(data.followers);
-    //         console.log(data);
+    const xhr = new XMLHttpRequest();
+    
+    xhr.open('GET', requestURL);
+    
+    xhr.onreadystatechange = () => {
+        console.log(xhr.readyState);
 
-    //         // document.getElementById('info').addEventListener('click', (e) => {
-    //         //     document.getElementById('output').innerHTML = `
-    //         //     <div class="card">
-    //         //         <img src="${data.avatar_url}" alt="Avatar" style="width:30%">
-    //         //         <div class="container">
-    //         //             <h4><b>Name: ${data.name}</b></h4>
-    //         //             <p>Followers: ${data.followers}</p>
-    //         //         </div>
-    //         //     </div>
-    //         //     `;
-    //         // });
-    //     }
-    // };
-    // xhr.send()
+        if (xhr.readyState === 4) {
+            data = JSON.parse(xhr.responseText);
+            /* 
+                Here we get the data in string format, 
+                so to access the data, we are converting it into JSON (Object) 
+            */
+            console.log(data);
 
-    // document.getElementById('info').addEventListener('click', (e) => {
-    //     document.getElementById('output').innerHTML = `
-    //         <div class="card">
-    //             <img src="${data.avatar_url}" alt="Avatar" style="width:30%">
-    //             <div class="container">
-    //                 <h4><b>Name: ${data.name}</b></h4>
-    //                 <p>Followers: ${data.followers}</p>
-    //             </div>
-    //         </div>
-    //     `;
-    // });
+            const myDiv = document.createElement('div')
+            myDiv.className = "main"
+            myDiv.id = "info";
+            myDiv.style.padding = "13px"
+            myDiv.style.backgroundColor = "aliceblue"
+            myDiv.style.width = "210px"
+            myDiv.style.marginTop = "30px"
 
+            const myH3 = document.createElement('h3')
+            myH3.id = "heading"
+            myH3.style.color = "#414141"
+            myH3.appendChild(document.createTextNode(`Name: ${data.name}`))
 
+            const myPara = document.createElement('p')
+            myPara.id = "para"
+            myPara.style.color = "#414141"
+            myPara.appendChild(document.createTextNode(`Followers: ${data.followers}`))
 
+            const myIMG = document.createElement('img')
+            myIMG.id = "image"
+            myIMG.alt = "Photo"
+            myIMG.src = `${data.avatar_url}`
+            myIMG.width = "200"
+
+            const myButton = document.createElement('button')
+            myButton.id = "button"
+            myButton.style.backgroundColor = "aliceblue"
+            myButton.style.color = "#414141"
+            myButton.appendChild(document.createTextNode("About Me"))
+            myButton.style.padding = "8px"
+
+            myDiv.appendChild(myIMG)
+            myDiv.appendChild(myH3)
+            myDiv.appendChild(myPara)
+
+            document.body.appendChild(myButton)
+
+            myButton.addEventListener('click', (e) => {
+                document.body.appendChild(myDiv)
+            })
+        }
+    }
+    /* 
+        onreadyStateChange is a property of XMLHttpRequest, and
+        it's basically an event handler which triggers every time the state changes
+    */
+
+    xhr.send();
 
     
 </script>
