@@ -72,46 +72,49 @@
 
 </body>
 <script>
-    const requestURL = "https://api.github.com/users/hiteshchoudhary"
+    // const requestURL = "https://api.github.com/users/hiteshchoudhary"
 
-    let data;
+    // let data;
 
-    const xhr = new XMLHttpRequest()
-    xhr.open('GET', requestURL)
-    xhr.onreadystatechange = () => {
-        console.log(xhr.readyState);
-        if(xhr.readyState === 4){
-            data = JSON.parse(xhr.responseText) // this will return a string value, so here we are converting string to JSON value
-            console.log(typeof data)
-            console.log(data.followers);
-            console.log(data);
+    // const xhr = new XMLHttpRequest()
+    // xhr.open('GET', requestURL)
+    // xhr.onreadystatechange = () => {
+    //     console.log(xhr.readyState);
+    //     if(xhr.readyState === 4){
+    //         data = JSON.parse(xhr.responseText) // this will return a string value, so here we are converting string to JSON value
+    //         console.log(typeof data)
+    //         console.log(data.followers);
+    //         console.log(data);
 
-            // document.getElementById('info').addEventListener('click', (e) => {
-            //     document.getElementById('output').innerHTML = `
-            //     <div class="card">
-            //         <img src="${data.avatar_url}" alt="Avatar" style="width:30%">
-            //         <div class="container">
-            //             <h4><b>Name: ${data.name}</b></h4>
-            //             <p>Followers: ${data.followers}</p>
-            //         </div>
-            //     </div>
-            //     `;
-            // });
-        }
-    };
-    xhr.send()
+    //         // document.getElementById('info').addEventListener('click', (e) => {
+    //         //     document.getElementById('output').innerHTML = `
+    //         //     <div class="card">
+    //         //         <img src="${data.avatar_url}" alt="Avatar" style="width:30%">
+    //         //         <div class="container">
+    //         //             <h4><b>Name: ${data.name}</b></h4>
+    //         //             <p>Followers: ${data.followers}</p>
+    //         //         </div>
+    //         //     </div>
+    //         //     `;
+    //         // });
+    //     }
+    // };
+    // xhr.send()
 
-    document.getElementById('info').addEventListener('click', (e) => {
-        document.getElementById('output').innerHTML = `
-            <div class="card">
-                <img src="${data.avatar_url}" alt="Avatar" style="width:30%">
-                <div class="container">
-                    <h4><b>Name: ${data.name}</b></h4>
-                    <p>Followers: ${data.followers}</p>
-                </div>
-            </div>
-        `;
-    });
+    // document.getElementById('info').addEventListener('click', (e) => {
+    //     document.getElementById('output').innerHTML = `
+    //         <div class="card">
+    //             <img src="${data.avatar_url}" alt="Avatar" style="width:30%">
+    //             <div class="container">
+    //                 <h4><b>Name: ${data.name}</b></h4>
+    //                 <p>Followers: ${data.followers}</p>
+    //             </div>
+    //         </div>
+    //     `;
+    // });
+
+
+
 
     
 </script>
