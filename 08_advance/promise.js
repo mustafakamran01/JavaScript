@@ -193,3 +193,26 @@
 // consumePromiseFive();
 
 
+/* This is how we get data using fetch and handle it using async and await */
+// async function getAllUsers(){
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/users")
+//         const data = await response.json();
+//         /* Converting response to JSON also takes sometimes that's why we need to put await in it */
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// getAllUsers();
+
+
+/* This is how we fetch the data from a API using fetch method and handle it using then and catch */
+fetch("https://jsonplaceholder.typicode.com/users")
+.then( (user) =>  user.json())
+.then( (data) => console.log(data))
+.catch( (error) => console.log(error))
+/* 
+    Here first then is returning the data that is converted into JSON format, and
+    second then is printing the converted data
+*/
