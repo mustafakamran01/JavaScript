@@ -1,17 +1,16 @@
-// function multiplyBy5(num){
-//     return num * 5
-// }
-// multiplyBy5.abc = 2
-// console.log(multiplyBy5(5))
-// console.log(multiplyBy5.abc);
-// console.log(multiplyBy5.prototype);
-/*
-    with the help of this example, we can say that function is also an object
-    i.e, we can add (multiplyBy5.abc = 2) and it print 2 as well, because
-    here we are adding a key value pair to an object i.e, multiplyBy5.abd = 2
+function multiply(num) {
+    return num * 5
+}
+multiply.xyz = 34;
 
-    and here, "multiplyBy5.prototype" given an empty object because, 
-    in JS nothing is above an object
+console.log(multiply(5));
+console.log(multiply.xyz);
+console.log(multiply.prototype);
+/* 
+    With the help of this example we can say that, function is also an object, because
+    we can add "multiply.xyz = 34" and it gives output as well
+
+    and here, multiply.prototype gives an empty object
 */
 
 
@@ -22,10 +21,12 @@ function createUser(userName, score){
 
 }
 
+/* Here we are creating a custom prototype */
 createUser.prototype.increment = function(){
     this.score++
 }
 
+/* Here we are creating a custom prototype */ 
 createUser.prototype.printMe = function(){
     console.log(`Score is ${this.score}`);
     
