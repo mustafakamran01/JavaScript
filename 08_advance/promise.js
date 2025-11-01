@@ -95,11 +95,27 @@
 
 
 /* This is how we fetch the data from a API using fetch method and handle it using then and catch */
-fetch("https://jsonplaceholder.typicode.com/users")
-.then( (user) =>  user.json())
-.then( (data) => console.log(data))
-.catch( (error) => console.log(error))
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then( (user) =>  user.json())
+// .then( (data) => console.log(data))
+// .catch( (error) => console.log(error))
 /* 
     Here first then is returning the data that is converted into JSON format, and
     second then is printing the converted data
 */
+
+
+/* Just for testing */
+// new Promise( (resolve, reject) => {
+//     const data = fetch("https://api.github.com/users/hiteshchoudhary")
+//     if (data) {
+//         resolve(data);
+//     } else {
+//         reject("Error: Something went wrong")
+//     }
+// }).then( (data) => {
+//     return data.json();
+// }).then( (data) => {
+//     console.log(data);
+// }).catch( (error) => console.log(error))
+
