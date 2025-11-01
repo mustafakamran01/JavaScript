@@ -9,7 +9,7 @@
 // })
 
 // promiseOne.then( () => {
-//     console.log("Promise consumed");
+    // console.log("Promise consumed");
     
 // })
 /*
@@ -102,7 +102,94 @@
 
 
 
-fetch('https://jsonplaceholder.typicode.com/users')
-.then( (response) => response.json())
-.then( (data) => console.log(data))
-.catch( (err) => console.log("E: ", err))
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then( (response) => response.json())
+// .then( (data) => console.log(data))
+// .catch( (err) => console.log("E: ", err))
+
+
+
+
+
+// const promiseOne = new Promise( (resolve, reject) => {
+//     /*
+//         Do async task like, DB calls, cryptogarphy, network calls
+//     */
+//     setTimeout( () => {
+//         console.log("Async task completed");
+//         resolve();
+//     }, 1000)
+// })
+// promiseOne.then( () => {
+//     console.log("Promise consumed");
+// })
+/* resolve is directly connected to then */
+
+
+/* Another way of creating promise without storing it into any variable */
+// new Promise( (resolve, reject) => {
+//     setTimeout( () => {
+//         console.log("Async task is completed");
+//         resolve();
+//     },1000)
+// }).then( () => {
+//     console.log("Promise is consumed");
+// })
+
+
+/* This is how we can pass parameters to then() through resolve() */
+// new Promise( (resolve, reject) => {
+//     setTimeout( () => {
+//         resolve({userName: "Mustafa", email: "kamran@apple.com"})
+//     }, 1000)
+// }).then( (user) => {
+//     console.log(user);
+// })
+
+
+/* This is how we use reject method and handle error in promise */
+// new Promise( (resolve, reject) => {
+//     setTimeout( () => {
+//         let error = false;
+
+//         if (!error) {
+//             resolve({username: "Kamran", pass: "12345"})
+//         } else {
+//             reject("Error: Something went wrong!!!")
+//         }
+//     }, 1000)
+// })
+// .then( (user) => {
+//     return user.username;
+// })
+// .then( (myUsername) => {
+//     console.log(myUsername);
+// })
+// .catch( (err) => console.log(err))
+// .finally( () => console.log("Promise is consumed, either resolved or rejected"))
+
+
+/* This is how we handle promise with help of async await */
+// const promiseFive = new Promise( (resolve, reject) => {
+//     setTimeout( () => {
+//         let error = false;
+
+//         if (!error) {
+//             resolve({username: "JavaScript", pass: "12345"})
+//         } else {
+//             reject("Error: Something went wrong")
+//         }
+//     }, 1000)
+// });
+// async function consumePromiseFive(){
+//     try {
+//         const data = await promiseFive
+//         /* Here we get the data from promiseFive whether resolve or reject */
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// consumePromiseFive();
+
+
