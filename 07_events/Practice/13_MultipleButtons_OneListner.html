@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Buttons, One Listener</title>
+</head>
+<body>
+    <h3>Add three buttons with different labels. Use a single event listener (via delegation) to alert which button was clicked.</h3>
+</body>
+<script>
+
+    // creating a div 
+    const myDiv = document.createElement('div')
+    myDiv.id = "main"
+
+
+    // Creating buttons
+    const myButton1 = document.createElement('button')
+    myButton1.id = "one"
+    myButton1.appendChild(document.createTextNode("Button 1"))
+
+    const myButton2 = document.createElement('button')
+    myButton2.id = "two"
+    myButton2.appendChild(document.createTextNode("Button 2"))
+
+    const myButton3 = document.createElement('button')
+    myButton3.id = "three"
+    myButton3.appendChild(document.createTextNode("Button 3"))
+
+
+    // Appending all buttons into div
+    myDiv.appendChild(myButton1)
+    myDiv.appendChild(myButton2)
+    myDiv.appendChild(myButton3)
+
+    // Appending div into body
+    document.body.appendChild(myDiv)
+
+
+    // Adding eventlistener to div
+    myDiv.addEventListener('click', (e) => {
+        
+        // Getting the id of the button clicked by the user
+        let id = e.target.id
+
+        // Showing alert message depending upon the button clicked by user
+        switch (id) {
+            case 'one':
+                alert("Button 1 is clicked!!")
+                break;
+
+            case 'two':
+                alert("Button 2 is clicked!!")
+                break;
+
+            case 'three':
+                alert("Button 3 is clicked!!")
+                break;
+        }
+    })
+
+</script>
+</html>
