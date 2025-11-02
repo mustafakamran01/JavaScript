@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling Test</title>
+</head>
+<body>
+    <h3>Create three nested elements (div inside div inside div). Add click listeners to each and log which element was clicked — observe bubbling order.</h3>
+</body>
+<script>
+
+    // creating first div
+    const myDiv1 = document.createElement('div')
+    myDiv1.id = "one"
+    myDiv1.style.backgroundColor = "blue"
+    myDiv1.style.padding = "50px"
+    myDiv1.style.width = "250px"
+
+    // Creating second div
+    const myDiv2 = document.createElement('div')
+    myDiv2.id = "two"
+    myDiv2.style.backgroundColor = "red"
+    myDiv2.style.padding = "50px"
+
+    // Creating third div
+    const myDiv3 = document.createElement('div')
+    myDiv3.id = "three"
+    myDiv3.style.backgroundColor = "pink"
+    myDiv3.style.padding = "50px"
+
+    // Appending all divs inside each other
+    document.body.appendChild(myDiv1)
+    myDiv1.appendChild(myDiv2)
+    myDiv2.appendChild(myDiv3)
+
+
+    // Adding eventlistner to div1
+    myDiv1.addEventListener('click', (e) => {
+        console.log("Div1 Clicked");
+    }, false)
+
+    // Adding eventlistner to div2
+    myDiv2.addEventListener('click', (e) => {
+        console.log("Div2 Clicked");
+    }, false)
+
+    // Adding eventlistner to div3
+    myDiv3.addEventListener('click', (e) => {
+        // e.stopPropagation();
+        console.log("Div3 Clicked");
+    }, false)
+
+</script>
+</html>
