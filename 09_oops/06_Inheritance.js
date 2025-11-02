@@ -1,26 +1,27 @@
-class User{
-    constructor(username){
-        this.username = username
+class User {
+    constructor(userName) {
+        this.userName = userName
     }
 
-    logMe(){
-        console.log(`USERNAME: ${this.username}`);
-        
+    logMe() {
+        return `Username is ${this.userName}`
     }
 }
 
-class Teacher extends User{
-    constructor(username, email, password){
-        super(username)
+class Teacher extends User {
+    constructor(userName, email, password) {
+        super(userName)
         this.email = email
         this.password = password
     }
 
-    addCourse(){
-        console.log(`Course is successfully added by ${this.username}`);
+    addCourse() {
+        return `A new course is added by ${this.userName}`
     }
 }
 
-const chai = new Teacher('Mustafa Kamran', 'kamran@delloite.com', '123')
-chai.addCourse()
-chai.logMe()
+const user1 = new Teacher("Kamran", "kamran@google.com", "1234321")
+console.log(user1);
+console.log(user1.addCourse());
+console.log(user1.logMe());
+
