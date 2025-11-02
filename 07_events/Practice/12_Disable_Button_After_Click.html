@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Button After Click</title>
+</head>
+<body>
+    <h3>When a button is clicked, disable it and show a message "You already clicked me!".</h3>
+</body>
+<script>
+
+    // Creating a new button element
+    const myButton = document.createElement('button')
+    myButton.id = "button"
+    myButton.appendChild(document.createTextNode("Click me"))
+
+    // Adding the button to the document body
+    document.body.appendChild(myButton)
+
+    // Adding click eventlistener to the button
+    myButton.addEventListener('click', (e) => {
+
+        // Disable the button when clicked
+        myButton.setAttribute('disabled', ' ')
+        
+        // Show an alert message
+        alert("You already clicked me")
+    })
+
+    
+
+</script>
+</html>
