@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Elements</title>
+</head>
+<body>
+    <h3>Create a “+ Add Item” button that adds new list-item. Each new item should respond to clicks without adding new listeners each time (use delegation).</h3>
+</body>
+<script>
+
+    // Creating an unordered list
+    const myUl = document.createElement('ul')
+    myUl.id = "main"
+
+    // Creating a button
+    const myButton = document.createElement('button')
+    myButton.id = "button"
+    myButton.appendChild(document.createTextNode("Add Item"))
+
+
+    // Appending both button and unordered-list to body
+    document.body.appendChild(myButton)
+    document.body.appendChild(myUl)
+
+    // Adding event listner to button to add new list-items
+    myButton.addEventListener('click', (e) => {
+        let myLi = document.createElement('li')
+        myLi.appendChild(document.createTextNode("New Item"))
+        myUl.appendChild(myLi)
+    })
+
+    // Adding eventlistener to unordered-list to show alert message whenever clicked on list-item
+    myUl.addEventListener('click', (e) => {
+        alert(e.target.innerHTML)
+    })
+
+</script>
+</html>
