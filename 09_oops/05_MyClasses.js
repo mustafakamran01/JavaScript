@@ -1,42 +1,55 @@
-// class user{
-//     constructor(username, email, password){
-//         this.username = username
-//         this.email = email
-//         this.password = password
-//     }
+/* Here we are creating a class of name user */
+class User {
+    /* Here we are setting values through constructor */
+    constructor(userName, email, password) {
+        this.userName = userName
+        this.email = email
+        this.password = password
+    }
 
-//     encryptPassword(){
-//         return `${this.password}abc`
-//     }
+    /* Here we are creating a function */
+    encryptPassword() {
+        return `ab${this.password}cc`
+    }
 
-//     changeUserName(){
-//         return `${this.username}`.toUpperCase()
-//     }
-// }
+    /* Again we are creating a function */
+    changeUserName(){
+        return `${this.userName}`.toUpperCase()
+    }
+}
 
-// const chai = new user('Mustafa Kamran', 'kamran@meta.com', '123')
-// // console.log(chai);
-// console.log(chai.encryptPassword())
-// console.log(chai.changeUserName())
+/* Creating an instance of class User and sending values to constructor */
+const user1 = new User("mustafa121", "mustafa@google.com", "123cd")
+
+console.log(user1);
+console.log(user1.encryptPassword());
+console.log(user1.changeUserName())
 
 
-// behind the scene
+/********************  Behind the scene ********************/
 
-function user(username, email, password){
-    this.username = username
+/* A function is created of name User and setting values through this */
+function User(userName, email, password) {
+    this.userName = userName
     this.email = email
     this.password = password
 }
 
-user.prototype.encryptPassword = function(){
-    return `${this.password}abc`
+/* Creating a function using prototype */
+User.prototype.encryptPassword = function () {
+    return `ab${this.password}cc`
 }
 
-user.prototype.changeUserName = function(){
-    return `${this.username.toUpperCase()}`
+/* Creating a function using prototype */
+User.prototype.changeUserName = function () {
+    return `${this.userName}`.toUpperCase()
 }
 
-const tea = new user("Mustafa Kamran", "kamran@meta.com", "123")
+/* calling User function and storing their values to user2 object */
+const user2 = new User("kamran212", "kamran@apple.com", "1223accd")
 
-console.log(tea.encryptPassword())
-console.log(tea.changeUserName())
+console.log(user2);
+console.log(user2.encryptPassword());
+console.log(user2.changeUserName());
+
+
