@@ -1,38 +1,38 @@
-// const str = "Mustafa   "
-// console.log(str.length);
+const name = "Mustafa Kamran"
 
-// const myHeros = ["thor", "spiderman"]
+const myHeros = ["throw", "ironMAn"]
 
-// const heroPower = {
-//     thor: "hammer",
-//     spiderman: "sling",
+const heroPower = {
+    thor: "hammer",
+    ironMan: "sling"
+}
 
-//     getSpiderPower: function(){
-//         console.log(`Spidy power is ${this.spiderman}`);
-        
-//     }
-// }
-
-// Object.prototype.kamran = function(){
-//     console.log("Kamran is present in all object");
-// }
-/*
-    here we are adding a property to object prototype, which can be accessed by all the strings, arrays, functions etc, because
-    all data types whether it is string, array, functions are goes through object
+Object.prototype.kamran = function() {
+    console.log("Kamran is present in all object");
+}
+/* 
+    Here we are creating a property of an object which can be accessible to object as well as Arrays, functions, String, 
+    because, these all belongs to an object
 */
 
-// Array.prototype.heyKamran = function(){
-//     console.log("Kamran is present in an array");
-    
-// }
+heroPower.kamran()
+myHeros.kamran()
+name.kamran()
 
-// heroPower.kamran()
-// myHeros.kamran()
-// myHeros.heyKamran()
-// heroPower.heyKamran()
-/*
-    it will give error because, heyKamran() is present in array prototype only
+Array.prototype.mustafa = () => {
+    console.log("Mustafa is present in all array");
+}
+/* 
+    Here we are creating a property of an Array which can be accessible by arrays only
 */
+
+myHeros.mustafa();
+// heroPower.mustafa();
+/* 
+    This will give error because, we create a property of an Array,
+    so, it can only be accessible by arrays not object, functions, String..
+*/
+
 
 
 /****************************** Inheritance *****************************/
@@ -57,17 +57,20 @@
 
 // Object.setPrototypeOf(teacher, user)
 /*
-    this is how we use inheritance, here property of user is inherited to teacher
+    This is how we use inheritance, here property of user is inherited to teacher
 */
 // console.log(teacher.userName)
 
 
-String.prototype.trueLength = function(){
-    console.log(`${this}`);
-    console.log(`True length is: ${this.trim().length}`);    
+
+const str = "   Mustafa    "
+
+String.prototype.trueLength = function() {
+    return `True length is ${this.trim().length}`
 }
+/* Here this refers to the context whom is calling this function */ 
 
-let anotherUser = "ChaiAurCode    "
+console.log(str.trueLength());
+/* Here "str" is calling this function so, this refers to str */
 
-anotherUser.trueLength()
-"   mustafa     ".trueLength()
+console.log("   Kamran  ".trueLength());
