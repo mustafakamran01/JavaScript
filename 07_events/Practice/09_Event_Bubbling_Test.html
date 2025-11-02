@@ -47,7 +47,11 @@
 
     // Adding eventlistner to div3
     myDiv3.addEventListener('click', (e) => {
-        // e.stopPropagation();
+        e.stopPropagation();
+        /*
+            By adding this line, now only this div will trigger, not the above divs.
+            This basically stop propagating from bottom-top or vice-versa.
+        */
         console.log("Div3 Clicked");
     }, false)
     /*
