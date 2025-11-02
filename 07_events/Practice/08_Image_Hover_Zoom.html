@@ -10,18 +10,22 @@
 </body>
 <script>
 
+    // Here we are creating an image element
     const myImg = document.createElement('img')
     myImg.id = "main"
     myImg.alt = "Image"
     myImg.src = "https://images.pexels.com/photos/33771131/pexels-photo-33771131.jpeg"
     myImg.style.width = "250px"
 
+    // Appending the image to the body
     document.body.appendChild(myImg);
 
+    // Adding eventlistner when mouse entered into the image
     myImg.addEventListener('mouseenter', (e) => {
         myImg.style.width = "300px"
     })
 
+    // Adding eventlistner when mouse leave the image
     myImg.addEventListener('mouseleave', (e) => {
         myImg.style.width = '250px'
     })
