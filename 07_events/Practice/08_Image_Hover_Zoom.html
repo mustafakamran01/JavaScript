@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Zoom</title>
+</head>
+<body>
+    <h3>When you hover over an image, increase its size by 20%; when the mouse leaves, return it to normal.</h3>
+</body>
+<script>
+
+    const myImg = document.createElement('img')
+    myImg.id = "main"
+    myImg.alt = "Image"
+    myImg.src = "https://images.pexels.com/photos/33771131/pexels-photo-33771131.jpeg"
+    myImg.style.width = "250px"
+
+    document.body.appendChild(myImg);
+
+    myImg.addEventListener('mouseenter', (e) => {
+        myImg.style.width = "300px"
+    })
+
+    myImg.addEventListener('mouseleave', (e) => {
+        myImg.style.width = '250px'
+    })
+
+</script>
+</html>
