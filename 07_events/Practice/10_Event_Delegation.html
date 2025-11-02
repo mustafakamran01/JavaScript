@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    <h3>You have an unordered list with many list-items. Add one event listener on unordered list that logs which list-item was clicked.</h3>
+</body>
+<script>
+
+    // Creating un-ordered list
+    const myUL = document.createElement('ul')
+    myUL.id = "main"
+
+
+    // Creating list-items
+    const li1 = document.createElement('li')
+    li1.id = "one"
+    li1.appendChild(document.createTextNode("Monday"))
+
+    const li2 = document.createElement('li')
+    li2.id = "two"
+    li2.appendChild(document.createTextNode("Tuesday"))
+
+    const li3 = document.createElement('li')
+    li3.id = "three"
+    li3.appendChild(document.createTextNode("Wednesday"))
+
+    const li4 = document.createElement('li')
+    li4.id = "four"
+    li4.appendChild(document.createTextNode("Thursday"))
+
+    const li5 = document.createElement('li')
+    li5.id = "five"
+    li5.appendChild(document.createTextNode("Friday"))
+
+    const li6 = document.createElement('li')
+    li6.id = "six"
+    li6.appendChild(document.createTextNode("Saturday"))
+
+    const li7 = document.createElement('li')
+    li7.id = "seven"
+    li7.appendChild(document.createTextNode("Sunday"))
+
+
+    // Appending all list-items to un-ordered list
+    myUL.appendChild(li1)
+    myUL.appendChild(li2)
+    myUL.appendChild(li3)
+    myUL.appendChild(li4)
+    myUL.appendChild(li5)
+    myUL.appendChild(li6)
+    myUL.appendChild(li7)
+
+
+    // Appending un-ordered list to the body
+    document.body.appendChild(myUL)
+
+
+    // Adding eventlistner to the un-ordered list and printing the list-item which ever is clicked
+    myUL.addEventListener('click', (e) => {
+        let id = e.target.id;
+
+        switch(id) {
+            case 'one':
+                console.log("It's Monday");
+                break;
+            
+            case 'two':
+                console.log("It's Tuesday");
+                break;
+
+            case 'three':
+                console.log("It's Wednesday");
+                break;
+
+            case 'four':
+                console.log("It's Thursday");
+                break;
+
+            case 'five':
+                console.log("It's Friday");
+                break;
+
+            case 'six':
+                console.log("It's Saturday");
+                break;
+
+            case 'seven':
+                console.log("It's Sunday");
+                break;
+        }
+    })
+
+</script>
+</html>
