@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Mouse Position</title>
+</head>
+<body>
+    <h3>Continuously show the current mouse X and Y position inside a div as the user moves the mouse.</h3>
+</body>
+<script>
+
+    // Creating a div element
+    const myDiv = document.createElement('div')
+    myDiv.id = "main"
+    myDiv.style.backgroundColor = "#414141"
+    myDiv.style.padding = "200px"
+
+    // Appending div element to the body
+    document.body.appendChild(myDiv)
+
+    // Adding eventlistener to div
+    myDiv.addEventListener('mousemove', (e) => {
+        myDiv.innerHTML = e.clientX + " , " + e.clientY
+        myDiv.style.color = 'white'
+    })
+
+</script>
+</html>
