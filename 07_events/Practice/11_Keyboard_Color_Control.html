@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Color Control</title>
+</head>
+<body>
+    <h3 id="main">Pressing the keys "R", "G", or "B" should change the background color to "red", "green", or "blue".</h3>
+</body>
+<script>
+
+    // Adding eventlistner to the body
+    document.querySelector('body').addEventListener('keypress', (e) => {
+        
+        //Getting the key which is entered by the user
+        let key = e.key.toUpperCase();
+
+        switch(key) {
+            case 'R':
+                document.querySelector('#main').style.color = "white"
+                document.body.style.backgroundColor = "red"
+                break;
+
+            case 'G':
+                document.querySelector('#main').style.color = "white"
+                document.body.style.backgroundColor = "green"
+                break;
+
+            case 'B':
+                document.querySelector('#main').style.color = "white"
+                document.body.style.backgroundColor = "blue"
+                break;
+
+            default:
+                alert("Please enter R or G or B")
+                break;
+        }
+    })
+
+</script>
+</html>
