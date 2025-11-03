@@ -6,8 +6,6 @@
     <title>Closures</title>
 </head>
 <body style="background-color: #313131;">
-    <button id="orange">Orange</button>
-    <button id="green">Green</button>
 </body>
 <script>
     // document.querySelector('#orange').addEventListener('click', () => {
@@ -17,18 +15,49 @@
     //     document.body.style.backgroundColor = 'green'
     // })
 
-    function colorChange(color){
+    // function colorChange(color){
+    //     return () => {
+    //         document.body.style.backgroundColor = `${color}`
+    //     }
+    // }
+
+    // document
+    // .getElementById('orange')
+    // .addEventListener('click', colorChange('orange'))
+
+    // document
+    // .getElementById('green')
+    // .addEventListener('click', colorChange('green'))
+
+    
+    /* Creating button1 for green color */
+    const button1 = document.createElement('button')
+    button1.id = "green"
+    button1.appendChild(document.createTextNode("Green"))
+    
+    /* Creating button2 for red color */
+    const button2 = document.createElement('button')
+    button2.id = "red"
+    button2.appendChild(document.createTextNode("Red"))
+    
+    /* Appending both buttons into body */
+    document.body.appendChild(button1)
+    document.body.appendChild(button2)
+    
+    /* Creating function for changing color of the body */
+    function colorChange(color) {
+        /* 
+            Here we are returning another function inside outer function, because
+            when we call this function(colorChange()) inside addEventListener, then it will directly execute, so
+            that's why we are returning another function
+        */
         return () => {
-            document.body.style.backgroundColor = `${color}`
+            document.body.style.backgroundColor = color
         }
     }
 
-    document
-    .getElementById('orange')
-    .addEventListener('click', colorChange('orange'))
+    button1.addEventListener('click', colorChange("green"))
+    button2.addEventListener('click', colorChange("red"))
 
-    document
-    .getElementById('green')
-    .addEventListener('click', colorChange('green'))
 </script>
 </html>
