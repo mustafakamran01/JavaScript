@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Event</title> 
+</head>
+<body>
+    <h3>Create and dispatch a custom event called "dataLoaded" after fetching some data, and log a message when it's triggered.</h3>
+</body>
+<script>
+
+    /* Here we are creating a custom event named as "dataLoaded" */
+    const dataLoadedEvent = new Event("dataLoaded")
+
+    document.addEventListener('dataLoaded', (e) => {
+        console.log("Fetching Data");
+    })
+
+    setTimeout( () => {
+        /* Here we are manually triggering the event with the help of "dispatchEvent" */
+        document.dispatchEvent(dataLoadedEvent)
+    }, 3000)
+
+    console.log("Data Fetched");
+    
+
+</script>
+</html>
