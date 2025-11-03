@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Shortcuts</title>
+</head>
+<body>
+    <h3>Pressing Ctrl + S shows "Save triggered" instead of performing the browser's default save action.</h3>
+</body>
+<script>
+
+    // Adding eventlistener to body
+    document.querySelector('body').addEventListener('keydown', (e) => {
+        e.preventDefault();
+        
+        // Checking if user enter ctrl+s
+        if (e.ctrlKey && e.key === "s") {
+            console.log("Save triggered");
+        }
+    });
+
+</script>
+</html>
