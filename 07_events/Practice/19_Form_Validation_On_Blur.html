@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation On Blur</title>
+</head>
+<body>
+    <h3>When an input field losses focus, check if it's empty and highlight it in red if so</h3>
+</body>
+<script>
+
+    // Creating label1 and input1 for name
+    const myLabel1 = document.createElement('label')
+    myLabel1.appendChild(document.createTextNode("Name: "))
+    const myInput1 = document.createElement('input')
+    myInput1.type = "text"
+    myInput1.id = "name"
+
+    // Creating label2 and input2 for email
+    const myLabel2 = document.createElement('label')
+    myLabel2.appendChild(document.createTextNode("Email: "))
+    const myInput2 = document.createElement("input")
+    myInput2.type = "email"
+    myInput2.id = "email"
+
+    // Appending all labels and inputs to the body
+    document.body.appendChild(myLabel1)
+    document.body.appendChild(myInput1)
+    document.body.appendChild(document.createElement('br'))
+    document.body.appendChild(document.createElement('br'))
+    document.body.appendChild(myLabel2)
+    document.body.appendChild(myInput2)
+
+    // Adding eventlistener to input1
+    myInput1.addEventListener('blur', (e) => {
+        if (myInput1.value.trim() === "") {
+            myInput1.style.border = "2px solid red"
+        } else {
+            myInput1.style.border = "2px solid green"
+        }
+    })
+
+    // Adding eventlistener to input2
+    myInput2.addEventListener('blur', (e) => {
+        if (myInput2.value.trim() === "") {
+            myInput2.style.border = "2px solid red"
+        } else {
+            myInput2.style.border = "2px solid green"
+        }
+    })
+
+</script>
+</html>
