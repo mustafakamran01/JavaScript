@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Delay</title>
+</head>
+<body>
+    <h3>When you hover over a button for more than 2 seconds, change its background color</h3>
+</body>
+<script>
+
+    // Creating a button
+    const myButton = document.createElement('button')
+    myButton.id = "hover"
+    myButton.appendChild(document.createTextNode("Hover me"))
+
+    // Appending button the the body
+    document.body.appendChild(myButton)
+
+    // Creating a variable to hold the reference of setTimeout
+    let setTimeoutRef = null;
+
+    // Adding eventlistener to the button
+    myButton.addEventListener('mouseover', (e) => {
+        setTimeoutRef = setTimeout( () => {
+            myButton.style.backgroundColor = 'red'
+        }, 5000)
+    })
+
+    myButton.addEventListener('mouseout', (e) => {
+        clearTimeout(setTimeoutRef);
+        myButton.style.backgroundColor = null;
+    })
+
+</script>
+</html>
