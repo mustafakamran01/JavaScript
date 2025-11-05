@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element</title>
+</head>
+<body style="background-color: #414141;">
+    <h3>Create a list and add a button beside each item to delete that specific item when clicked.</h3>
+</body>
+<script>
+
+    const myUl = document.createElement('ul')
+    myUl.id = "un-ordered"
+
+    const li1 = document.createElement('li')
+    li1.id = "one"
+    li1.appendChild(document.createTextNode("Apple"))
+    li1.style.fontSize = "25px"
+
+    const li2 = document.createElement('li')
+    li2.id = "two"
+    li2.appendChild(document.createTextNode("Banana"))
+    li2.style.fontSize = "25px"
+
+    const li3 = document.createElement('li')
+    li3.id = "three"
+    li3.appendChild(document.createTextNode("Grapes"))
+    li3.style.fontSize = "25px"
+
+    const li4 = document.createElement('li')
+    li4.id = "four"
+    li4.appendChild(document.createTextNode("Guava"))
+    li4.style.fontSize = "25px"
+
+    const li5 = document.createElement('li')
+    li5.id = "five"
+    li5.appendChild(document.createTextNode("Mango"))
+    li5.style.fontSize = "25px"
+
+    const li6 = document.createElement('li')
+    li6.id = "six"
+    li6.appendChild(document.createTextNode("Orange"))
+    li6.style.fontSize = "25px"
+
+    const li7 = document.createElement('li')
+    li7.id = "seven"
+    li7.appendChild(document.createTextNode("Papaya"))
+    li7.style.fontSize = "25px"
+
+    const li8 = document.createElement('li')
+    li8.id = "eight"
+    li8.appendChild(document.createTextNode("Jack Fruit"))
+    li8.style.fontSize = "25px"
+
+    const li9 = document.createElement('li')
+    li9.id = "nine"
+    li9.appendChild(document.createTextNode("Kiwi"))
+    li9.style.fontSize = "25px"
+
+    const li10 = document.createElement('li')
+    li10.id = "ten"
+    li10.appendChild(document.createTextNode("Pomogranate"))
+    li10.style.fontSize = "25px"
+
+
+    const button1 = document.createElement('button')
+    button1.id = "b1"
+    button1.appendChild(document.createTextNode("Click me"))
+    button1.style.marginLeft = "100px"
+    
+
+    const button2 = document.createElement('button')
+    button2.id = "b2"
+    button2.appendChild(document.createTextNode("Click me"))
+    button2.style.marginLeft = "85px"
+
+    const button3 = document.createElement('button')
+    button3.id = "b3"
+    button3.appendChild(document.createTextNode("Click me"))
+    button3.style.marginLeft = "90px"
+
+    const button4 = document.createElement('button')
+    button4.id = "b4"
+    button4.appendChild(document.createTextNode("Click me"))
+    button4.style.marginLeft = "95px"
+
+    const button5 = document.createElement('button')
+    button5.id = "b5"
+    button5.appendChild(document.createTextNode("Click me"))
+    button5.style.marginLeft = "90px"
+
+    const button6 = document.createElement('button')
+    button6.id = "b6"
+    button6.appendChild(document.createTextNode("Click me"))
+    button6.style.marginLeft = "87px"
+
+    const button7 = document.createElement('button')
+    button7.id = "b7"
+    button7.appendChild(document.createTextNode("Click me"))
+    button7.style.marginLeft = "89px"
+
+    const button8 = document.createElement('button')
+    button8.id = "b8"
+    button8.appendChild(document.createTextNode("Click me"))
+    button8.style.marginLeft = "63px"
+
+    const button9 = document.createElement('button')
+    button9.id = "b9"
+    button9.appendChild(document.createTextNode("Click me"))
+    button9.style.marginLeft = "113px"
+
+    const button10 = document.createElement('button')
+    button10.id = "b10"
+    button10.appendChild(document.createTextNode("Click me"))
+    button10.style.marginLeft = "32px"
+
+
+    myUl.appendChild(li1)
+    li1.appendChild(button1)
+
+    myUl.appendChild(li2)
+    li2.appendChild(button2)
+
+    myUl.appendChild(li3)
+    li3.appendChild(button3)
+
+    myUl.appendChild(li4)
+    li4.appendChild(button4)
+
+    myUl.appendChild(li5)
+    li5.appendChild(button5)
+
+    myUl.appendChild(li6)
+    li6.appendChild(button6)
+
+    myUl.appendChild(li7)
+    li7.appendChild(button7)
+
+    myUl.appendChild(li8)
+    li8.appendChild(button8)
+
+    myUl.appendChild(li9)
+    li9.appendChild(button9)
+
+    myUl.appendChild(li10)
+    li10.appendChild(button10)
+
+    document.body.appendChild(myUl)
+
+
+    myUl.addEventListener('click', (e) => {
+        if (e.target.tagName === "BUTTON") {
+            e.target.parentNode.remove();
+        }
+    })
+    
+
+
+
+
+</script>
+</html>
