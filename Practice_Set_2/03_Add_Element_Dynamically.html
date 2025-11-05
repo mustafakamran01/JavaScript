@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element Dynamically</title>
+</head>
+<body>
+    <h3>
+        Create an input box and a button. When the button is clicked, 
+        add the text entered in the input box as a new list item inside an un-ordered list.
+    </h3>
+</body>
+<script>
+
+    // Creating an input box
+    const myInput = document.createElement('input')
+    myInput.type = "text"
+    myInput.id = "input"
+
+    // Creating a button
+    const myButton = document.createElement('button')
+    myButton.id = "button"
+    myButton.appendChild(document.createTextNode("Create"))
+
+    // Creating an un-ordered list
+    const myUl = document.createElement('ul')
+    myUl.id = "un-ordered"
+
+
+    // Appending all input-box, button, and un-ordered list to the body
+    document.body.appendChild(myInput)
+    document.body.appendChild(myButton)
+    document.body.appendChild(myUl)
+
+    // Adding eventlistener to the button
+    myButton.addEventListener('click', (e) => {
+        const myLi = document.createElement('li')
+        myLi.appendChild(document.createTextNode(myInput.value))
+        myUl.appendChild(myLi)
+        myInput.value = " "
+    })
+
+</script>
+</html>
