@@ -10,9 +10,11 @@
 </body>
 <script>
 
+    // Creating un-ordered list
     const myUl = document.createElement('ul')
     myUl.id = "un-ordered"
 
+    // Creating list elements
     const li1 = document.createElement('li')
     li1.id = "one"
     li1.appendChild(document.createTextNode("Apple"))
@@ -64,6 +66,7 @@
     li10.style.fontSize = "25px"
 
 
+    // Creating buttons
     const button1 = document.createElement('button')
     button1.id = "b1"
     button1.appendChild(document.createTextNode("Click me"))
@@ -116,6 +119,7 @@
     button10.style.marginLeft = "32px"
 
 
+    // Appending list-item to un-ordered list, and buttons to list-item
     myUl.appendChild(li1)
     li1.appendChild(button1)
 
@@ -146,9 +150,11 @@
     myUl.appendChild(li10)
     li10.appendChild(button10)
 
+    // Appending un-ordered list to body
     document.body.appendChild(myUl)
 
 
+    // Adding eventlistener to button
     myUl.addEventListener('click', (e) => {
         if (e.target.tagName === "BUTTON") {
             e.target.parentNode.remove();
