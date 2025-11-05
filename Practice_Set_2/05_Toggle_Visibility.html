@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Visibility</title>
+</head>
+<body style="background-color: #414141; color: white;">
+    <h3>Create a paragraph and a button. When the button is clicked, 
+        hide or show the paragraph (toggle between display: none and display: block).
+    </h3>
+</body>
+<script>
+
+    // Creating paragraph
+    const myPara = document.createElement('p')
+    myPara.id = "para"
+    myPara.appendChild(document.createTextNode("Some text which are not meant to be seen, but since you are special one, I am allowing you to see this. But don't tell this to anyone. I trust you that's why I am letting you see this. I hope you won't break my trust. All the best."))
+    myPara.style.display = "none"
+
+    // Creating button
+    const myButton = document.createElement('button')
+    myButton.id = "button"
+    myButton.appendChild(document.createTextNode("Click me to see magic"))
+
+    // Appending both button and paragraph to the body
+    document.body.appendChild(myButton)
+    document.body.appendChild(myPara)
+
+    let flag = 0;
+
+    // Adding eventlistener to button
+    myButton.addEventListener('click', (e) => {
+        if (flag === 0) {
+            myPara.style.display = "block"
+            flag = 1
+        } else {
+            myPara.style.display = "none"
+            flag = 0
+        }
+
+    })
+
+
+
+</script>
+</html>
