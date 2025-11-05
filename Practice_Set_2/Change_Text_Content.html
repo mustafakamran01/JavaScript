@@ -8,4 +8,28 @@
 <body>
     <h3>Create a button that, when clicked, changes the text of a paragraph to “Hello JavaScript!”.</h3>
 </body>
+<script>
+
+    // Creating button 
+    const myButton = document.createElement('button')
+    myButton.id = "button"
+    myButton.appendChild(document.createTextNode("Click me"))
+    
+    // Creating paragraph
+    const myPara = document.createElement('p')
+    myPara.id = "para"
+    
+    // Appending both button and paragraph to the body
+    document.body.appendChild(myButton)
+    document.body.appendChild(myPara)
+
+    // Adding eventlistener to the button to change the text of paragraph
+    myButton.addEventListener('click', (e) => {
+        myPara.appendChild(document.createTextNode("Hello JavaScript!"))
+        // myButton.setAttribute('disabled' ,' ')
+    })
+
+
+
+</script>
 </html>
