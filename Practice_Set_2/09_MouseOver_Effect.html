@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover Effects</title>
+</head>
+<body>
+    <h3>When you hover over a box, change its background color and display the coordinates of the mouse inside the box.</h3>
+</body>
+<script>
+
+    // Creating a div
+    const myDiv = document.createElement('div')
+    myDiv.id = "main"
+    myDiv.style.padding = "100px"
+    myDiv.style.border = "3px solid blue"
+    myDiv.style.textAlign = 'center'
+
+    // Appending div to body
+    document.body.appendChild(myDiv)
+
+    // Adding eventlistener to div when mouse enter
+    myDiv.addEventListener('mousemove', (e) => {
+        myDiv.innerHTML = `${e.clientX} , ${e.clientY}`
+        myDiv.style.backgroundColor = "blue"
+        myDiv.style.color = "white"
+    })
+
+    // Adding eventlistener to div when mouse leave
+    myDiv.addEventListener('mouseleave', (e) => {
+        myDiv.innerHTML = ""
+        myDiv.style.backgroundColor = null;
+    })
+
+</script>
+</html>
