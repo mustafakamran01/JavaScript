@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+</head>
+<body>
+    <h3>Create an input box that shows which key the user just pressed below it (e.g., “You pressed: A”).</h3>
+</body>
+<script>
+
+    // Creating label element
+    const myLabel = document.createElement('label')
+    myLabel.id = "myLabel"
+    myLabel.appendChild(document.createTextNode("Output: "))
+
+    // Creating input element
+    const myInput = document.createElement("input")
+    myInput.id = "myInput"
+    myInput.type = "text"
+
+    // Appending both label and input to the body
+    document.body.appendChild(myLabel)
+    document.body.appendChild(myInput)
+
+    // Initializing flag and ref both
+    let flag = null;
+    let ref = null;
+
+    // Adding eventlistener on body
+    document.querySelector('body').addEventListener('keydown', (e) => {
+        clearTimeout(ref);
+
+        flag = 0;
+
+        myInput.value = `You Pressed: ${e.key}`
+
+        // If no input in 5sec, the input box will become empty
+        ref = setTimeout( () => {
+            myInput.value = ""
+        }, 5000)
+    })
+
+</script>
+</html>
