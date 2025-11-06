@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    <h3>
+        Create a list of items dynamically.
+        When you click on any list item, it should show “You clicked on Item X” in the console — 
+        but attach only one event listener to the parent un-ordered list.
+    </h3>
+</body>
+<script>
+
+    // Creating un-ordered list
+    const myUl = document.createElement('ul')
+    myUl.id = "myUl"
+
+    // Creating list-items
+    const li1 = document.createElement('li')
+    li1.id = "li1"
+    li1.appendChild(document.createTextNode("JavaScript"))
+
+    const li2 = document.createElement('li')
+    li2.id = "li2"
+    li2.appendChild(document.createTextNode("Java"))
+
+    const li3 = document.createElement('li')
+    li3.id = "li3"
+    li3.appendChild(document.createTextNode("Ruby"))
+
+    const li4 = document.createElement('li')
+    li4.id = "li4"
+    li4.appendChild(document.createTextNode("Python"))
+
+    const li5 = document.createElement('li')
+    li5.id = "li5"
+    li5.appendChild(document.createTextNode("C++"))
+
+    // Appending all list items to un-ordered list
+    myUl.appendChild(li1)
+    myUl.appendChild(li2)
+    myUl.appendChild(li3)
+    myUl.appendChild(li4)
+    myUl.appendChild(li5)
+
+    // Appending un-ordered list to the body
+    document.body.appendChild(myUl)
+
+    // Adding eventlistener to un-ordered list
+    myUl.addEventListener('click', (e) => {
+        if (e.target.tagName === "LI") {
+            alert(`You clicked on ${e.target.innerHTML}`)
+        }
+    })
+
+</script>
+</html>
