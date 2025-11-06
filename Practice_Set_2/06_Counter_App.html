@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+</head>
+<body>
+    <h3>Create two buttons: “+” and “–”.
+        Display a counter that increases or decreases when buttons are clicked.
+    </h3>
+</body>
+<script>
+
+    // Creating button1
+    const button1 = document.createElement('button')
+    button1.id = "one"
+    button1.appendChild(document.createTextNode("Increase"))
+
+    // Creating button2
+    const button2 = document.createElement('button')
+    button2.id = "two"
+    button2.appendChild(document.createTextNode("Decrease"))
+
+    // Creating paragraph to show the value
+    const myPara = document.createElement('p')
+    myPara.id = "para"
+
+    // Appending all buttons and paragraph to the body
+    document.body.appendChild(button1)
+    document.body.appendChild(button2)
+    document.body.appendChild(myPara)
+
+    // Initializing a value
+    let value = 10;
+
+    // Appending value into paragraph
+    myPara.appendChild(document.createTextNode(value))
+
+    // Adding eventlistener to button1 to increase value upto 20 
+    button1.addEventListener('click', (e) => {
+        value = value + 1;
+        if (value <= 20) {
+            myPara.innerHTML = value;
+        }
+    })
+
+    // Adding eventlistener to button2 to decrease value upto 0
+    button2.addEventListener('click', (e) => {
+        value = value - 1;
+        if (value >= 0) {
+            myPara.innerHTML = value
+        }
+    })
+
+</script>
+</html>
