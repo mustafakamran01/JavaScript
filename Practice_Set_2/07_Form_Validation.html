@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h3>Build a simple form with name, email, and password fields.
+        On form submission:
+        -> Prevent the default behavior.
+        -> Check if all fields are filled.
+        -> Show appropriate error messages below each field.
+    </h3>
+</body>
+<script>
+
+    // Creating form, button, inputs, labels and paragraphs
+    const myForm = document.createElement('form')
+    myForm.id = "main"
+
+    const myButton = document.createElement('button')
+    myButton.id = "subt"
+    myButton.appendChild(document.createTextNode("Submit"))
+    
+    const label1 = document.createElement('label')
+    label1.appendChild(document.createTextNode("Name: "))
+    label1.id = "label1"
+
+    const input1 = document.createElement('input')
+    input1.type = "text"
+    input1.id = "input1"
+    input1.style.marginLeft = "30px"
+
+    const para1 = document.createElement("p")
+    para1.id = "para1"
+    para1.style.marginBottom = "-15px"
+    para1.style.marginTop = "2px"
+    para1.style.marginLeft = "75px"
+    para1.style.color = "red"
+    para1.style.fontSize = "14px"
+
+    const label2 = document.createElement('label')
+    label2.appendChild(document.createTextNode("Email: "))
+    label2.id = "label2"
+
+    const input2 = document.createElement('input')
+    input2.type = "email"
+    input2.id = "input2"
+    input2.style.marginLeft = "30px"
+
+    const para2 = document.createElement("p")
+    para2.id = "para2"
+    para2.style.marginTop = "2px"
+    para2.style.marginBottom = "-15px"
+    para2.style.marginLeft = "75px"
+    para2.style.color = "red"
+    para2.style.fontSize = "14px"
+
+    const label3 = document.createElement('label')
+    label3.appendChild(document.createTextNode("Password: "))
+    label3.id = "label3"  
+    
+    const input3 = document.createElement('input')
+    input3.type = "password"
+    input3.id = "input3"
+    input3.style.marginLeft = "7px"
+
+    const para3 = document.createElement("p")
+    para3.id = "para3"
+    para3.style.marginTop = "2px"
+    para3.style.marginBottom = "-15px"
+    para3.style.marginLeft = "75px"
+    para3.style.color = "red"
+    para3.style.fontSize = "14px"
+
+    // Appending form to the body
+    document.body.appendChild(myForm)
+
+    // Appending labels, inputs, paragraphs, and button to the form
+    myForm.appendChild(label1)
+    myForm.appendChild(input1)
+    myForm.appendChild(para1)
+    myForm.appendChild(document.createElement('br'))
+    myForm.appendChild(document.createElement('br'))
+    myForm.appendChild(label2)
+    myForm.appendChild(input2)
+    myForm.appendChild(para2)
+    myForm.appendChild(document.createElement('br'))
+    myForm.appendChild(document.createElement('br'))
+    myForm.appendChild(label3)
+    myForm.appendChild(input3)
+    myForm.appendChild(para3)
+    myForm.appendChild(document.createElement('br'))
+    myForm.appendChild(document.createElement('br'))
+    myForm.appendChild(myButton)
+
+
+    // Adding event listener to the form 
+    myForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (input1.value === "") {
+            input1.style.border = "2px solid red"
+            para1.innerHTML = "* This field is mandatory"
+        } else {
+            input1.style.border = "2px solid green"
+            para1.innerHTML = ""
+        }
+
+        if (input2.value === "") {
+            input2.style.border = "2px solid red"
+            para2.innerHTML = "* This field is mandatory"
+        } else {
+            input2.style.border = "2px solid green"
+            para2.innerHTML = ""
+        }
+
+        if (input3.value === "") {
+            input3.style.border = "2px solid red"
+            para3.innerHTML = "* This field is mandatory"
+        } else {
+            input3.style.border = "2px solid green"
+            para3.innerHTML = ""
+        }
+    })
+
+</script>
+</html>
