@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttling Scroll Event</title>
+</head>
+<body style="background-color: #414141; color: azure;">
+    <h3>On window scroll, log "Scrolling..." but not more than once every 300 milliseconds (throttle the event).</h3>
+</body>
+<script>
+
+    const para = document.createElement('p')
+    para.id = "para"
+
+    para.innerHTML = `S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.S refers to JavaScript, a high-level, interpreted scripting language primarily known as the programming language of the web. It is one of the three core technologies for web development, alongside HTML (which defines the structure of web content) and CSS (which styles the presentation of web content).
+                    Key characteristics and uses of JavaScript include:
+                    Client-side scripting: JavaScript is widely used for creating interactive and dynamic content within web browsers. It allows for manipulation of HTML and CSS, handling user events (like clicks and form submissions), and enabling animations.
+                    Cross-platform: JavaScript runs on various platforms, including web browsers, servers (with Node.js), and even in desktop and mobile applications.
+                    Versatility: While initially designed for web browsers, its applications have expanded significantly. Node.js allows JavaScript to be used for server-side programming, enabling full-stack development with a single language.
+                    Interpreted language: JavaScript code is typically executed line by line by a browser's JavaScript engine, offering flexibility and dynamic capabilities.
+                    Multiple paradigms: It supports various programming paradigms, including object-oriented, imperative, and functional programming.`
+
+    document.body.appendChild(para)
+
+    let lastTime = 0;
+
+    window.addEventListener('scroll', (e) => {
+        let timeNow = Date.now();
+        if (timeNow - lastTime > 3000) {
+            console.log("Scrolling");
+            lastTime = timeNow;
+        }
+        
+    })
+
+    
+</script>
+</html>
