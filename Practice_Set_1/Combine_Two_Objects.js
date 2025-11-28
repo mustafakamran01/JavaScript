@@ -23,15 +23,6 @@ let myObj2 = {
     a: 10
 }
 
-// let myObj1Arr = Object.entries(myObj1)
-// let myObj2Arr = Object.entries(myObj2)
-
-// const newObj = Object.fromEntries(myObj1Arr.filter( ([Key, value]) => !Key.includes(myObj1Arr))
-//                                            . concat(myObj2Arr))
-
-// console.log(newObj);
-
-
 let myObj1Arr = Object.entries(myObj1)
 let myObj2Arr = Object.entries(myObj2)
 
