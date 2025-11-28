@@ -12,19 +12,30 @@ Example:
 
 let myObj1 = {
     a: 1,
-    b: 2
+    b: 2,
+    c: 5,
+    d: 20
 }
 
 let myObj2 = {
     b: 3,
-    c: 4
+    c: 4,
+    a: 10
 }
+
+// let myObj1Arr = Object.entries(myObj1)
+// let myObj2Arr = Object.entries(myObj2)
+
+// const newObj = Object.fromEntries(myObj1Arr.filter( ([Key, value]) => !Key.includes(myObj1Arr))
+//                                            . concat(myObj2Arr))
+
+// console.log(newObj);
+
 
 let myObj1Arr = Object.entries(myObj1)
 let myObj2Arr = Object.entries(myObj2)
 
-const newObj = Object.fromEntries(myObj1Arr.filter( ([Key, value]) => !Key.includes(myObj1Arr))
-                                           . concat(myObj2Arr))
+const newObj = Object.fromEntries(myObj1Arr.filter( ([key, value]) => !myObj2Arr.includes(key)).concat(myObj2Arr))
 
 console.log(newObj);
 
