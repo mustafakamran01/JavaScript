@@ -12,22 +12,37 @@ let userInput = prompt("Enter a string: ").toLowerCase();
 
 let count = 0;
 
-function vowelsCount(input){
+const vowelsCount = (input) => {
 
-    for(let char of input){
-        if (char === 'a'){
-            count++;
-        } else if(char === 'e'){
-            count++;
-        } else if(char === 'i'){
-            count++;
-        } else if(char === 'o'){
-            count++;
-        } else if(char === 'u'){
-            count++;
+    for (let i = 0; i < input.length; i++) {
+
+        switch (input.charAt(i)) {
+            case 'a':
+                count++;
+                break;
+
+            case 'e':
+                count++;
+                break;
+
+            case 'i':
+                count++;
+                break;
+
+            case 'o':
+                count++;
+                break;
+
+            case 'u':
+                count++;
+                break;
+        
+            default:
+                break;
         }
     }
-    return count;
+
+    return count
 }
 
 console.log(vowelsCount(userInput));
