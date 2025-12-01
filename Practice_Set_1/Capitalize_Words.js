@@ -2,8 +2,10 @@
 
 let myStr = "my name is mustafa kamran"
 
-const capitalized = myStr.split(' ')
-                         .map( (word) => word.charAt(0).toUpperCase() + word.slice(1))
-                         .join(" ")
+const capitalizedArr = myStr.split(" ")
+                            .map( (word) => word.charAt(0).toUpperCase() + word.slice(1))
+                            .join(" ")
 
-console.log(capitalized);
+console.log(capitalizedArr);
+
+
