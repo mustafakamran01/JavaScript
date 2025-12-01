@@ -13,19 +13,21 @@ const prompt = require("prompt-sync")();
 
 let userInput = prompt("Enter a string: ").toLowerCase();
 
-const checkPalindrome = (userInput) => {
-    
-    let temp = userInput;
-    let newStr = "";
 
-    for (let i = userInput.length-1; i >= 0; i--){
-        newStr += userInput[i]
+const checkPalindrome = (input) => {
+    let temp = ""
+
+    for (let i = input.length - 1; i >= 0; i--) {
+        temp += input.charAt(i)
     }
 
-    if (temp === newStr){
+    if (temp === input) {
         return "String is palindrome"
     }
 
     return "String is not palindrome"
 }
+
 console.log(checkPalindrome(userInput));
+
+
