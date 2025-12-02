@@ -1,26 +1,23 @@
 /* We need to find out the number of unique elements present in an array */
 
-// let myArr = [1, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6, 6]
+let myArr = [1, 2, 2, 3, 4, 4, 5,]
 
-// const mySet = new Set();
+const occurence = {}
+let count = 0;
 
-// for (let ele of myArr){
-//     mySet.add(ele)
-// }
+myArr.forEach( (ele) => occurence[ele] ? occurence[ele]++ : occurence[ele] = 1)
 
-// // console.log(mySet.size);
+// console.log(occurence);
 
-// let count = 0;
+for (let key in occurence) {
+    // console.log(occurence[key]);
+    if (occurence[key] == 1) {
+        count++;
+    }
+}
 
-// for (let i = 0; i < myArr.length - 1; i++) {
-//     // for (let j = 0; j < myArr.length; j++) {
-//         if (myArr[i] == myArr[i+1]) {
-//             count++;
-//         // }
-//     }
-// }
+console.log(`Unique number of element: ${count}`);
 
-// console.log(mySet.size - count);
 
 
 
