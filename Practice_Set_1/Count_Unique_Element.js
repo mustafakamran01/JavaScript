@@ -13,10 +13,13 @@ for (let key in occurence) {
     // console.log(occurence[key]);
     if (occurence[key] == 1) {
         count++;
+        console.log(`${key} is unique`);
     }
 }
 
 console.log(`Unique number of element: ${count}`);
+
+/* Here we are printing all the elements which are unique and number of unique elements as well */
 
 
 
