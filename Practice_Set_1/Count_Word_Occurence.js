@@ -8,17 +8,19 @@
 
 let myStr = "I love coding and I love coding in javaScript";
 
-let strArr = myStr.split(" ");
+// let strArr = myStr.split(" ");
 
-let wordCount = {}
+// let wordCount = {}
 
-for (let ele of strArr){
-    // console.log(wordCount[ele]);
-    if (wordCount[ele]){
-        wordCount[ele]++;
-    } else {
-        wordCount[ele] = 1;
-    }
-}
+// for (let ele of strArr){
+//     console.log(wordCount[ele]);
+//     if (wordCount[ele]){
+//         wordCount[ele]++;
+//     } else {
+//         wordCount[ele] = 1;
+//     }
+// }
 
-console.log(wordCount);
+// console.log(wordCount);
+
+
