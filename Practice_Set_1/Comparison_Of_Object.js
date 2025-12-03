@@ -8,54 +8,36 @@ const input1 = {
     a: 1,
     b: {
         d: 5
-    }
+    },
+    s: 5
 }
 
 const input2 = {
     a: 1,
     b: {
-        d: 2
-    }
+        d: 5
+    },
+    s: 5
 }
-
 
 function comparison(obj1, obj2) {
 
     if (obj1 === obj2) return true
 
-    if (typeof(obj1) != 'object' || typeof(obj2) != 'object' || obj1 == null || obj2 == null) return false
-    
-    
+    if (typeof(obj1) !== 'object' || typeof(obj2) !== 'object' || obj1 == null || obj2 == null) return false
+
     let keys1 = Object.keys(obj1)
     let keys2 = Object.keys(obj2)
-    
-    if (keys1.length !== keys2.length) return false
-    
-    
+
+    if (keys1.length != keys2.length) return false
+
     for (let key of keys1) {
         if (!comparison(obj1[key], obj2[key])) {
             return false
         }
     }
-    
+
     return true
 }
 
 console.log(comparison(input1, input2));
-
-
-// console.log(input1);
-// console.log(input2)
-
-// let input1Arr = Object.entries(input1)
-// let input2Arr = Object.entries(input2)
-
-// console.log(input1Arr);
-// console.log(input2Arr);
-
-
-// let keys1 = Object.keys(input1)
-// let keys2 = Object.keys(input2)
-
-// console.log(keys1);
-// console.log(keys2);
