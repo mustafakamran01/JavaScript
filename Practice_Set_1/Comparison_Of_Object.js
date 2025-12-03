@@ -21,15 +21,17 @@ const input2 = {
 // console.log(input1);
 // console.log(input2)
 
-let input1Arr = Object.entries(input1)
-let input2Arr = Object.entries(input2)
+// let input1Arr = Object.entries(input1)
+// let input2Arr = Object.entries(input2)
 
 // console.log(input1Arr);
 // console.log(input2Arr);
 
 
-let keys1 = Object.keys(input1)
-let keys2 = Object.keys(input2)
+// let keys1 = Object.keys(input1)
+// let keys2 = Object.keys(input2)
 
-console.log(keys1);
-console.log(keys2);
+// console.log(keys1);
+// console.log(keys2);
+
+
