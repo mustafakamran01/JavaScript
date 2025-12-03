@@ -7,18 +7,14 @@
 const input1 = {
     a: 1,
     b: {
-        c: 2
-    },
-    s: 5
+        d: 5
+    }
 }
 
 const input2 = {
     a: 1,
     b: {
-        d: 2,
-        e: {
-            f: 4
-        }
+        d: 2
     }
 }
 
