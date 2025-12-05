@@ -6,6 +6,7 @@
     Output: { I: 2, love: 2, coding: 1, and: 1, JavaScript: 1 }
 */
 
+// Taking string as an input
 let myStr = "I love coding and I love coding in javaScript";
 
 let wordCount = {}
