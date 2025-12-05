@@ -20,6 +20,7 @@ const input2 = {
     s: 5
 }
 
+// We are creating a function to compare both object recursively
 function comparison(obj1, obj2) {
 
     if (obj1 === obj2) return true
