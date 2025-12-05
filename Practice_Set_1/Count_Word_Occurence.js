@@ -9,6 +9,7 @@
 // Taking string as an input
 let myStr = "I love coding and I love coding in javaScript";
 
+// Taking an empty object to count the occurency of each word
 let wordCount = {}
 
 myStr.split(' ').forEach( (word) => wordCount[word] ? wordCount[word]++ : wordCount[word] = 1)
