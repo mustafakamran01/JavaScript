@@ -15,4 +15,5 @@ let wordCount = {}
 // Applying loop to array to add occurence to each word
 myStr.split(' ').forEach( (word) => wordCount[word] ? wordCount[word]++ : wordCount[word] = 1)
 
+// Printing the object
 console.log(wordCount);
