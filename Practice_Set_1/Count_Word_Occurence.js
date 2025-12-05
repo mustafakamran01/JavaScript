@@ -12,6 +12,7 @@ let myStr = "I love coding and I love coding in javaScript";
 // Taking an empty object to count the occurency of each word
 let wordCount = {}
 
+// Applying loop to array to add occurence to each word
 myStr.split(' ').forEach( (word) => wordCount[word] ? wordCount[word]++ : wordCount[word] = 1)
 
 console.log(wordCount);
