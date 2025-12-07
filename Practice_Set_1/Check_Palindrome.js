@@ -11,9 +11,10 @@
 
 const prompt = require("prompt-sync")();
 
+// Here we are taking input from the user and making it small letter
 let userInput = prompt("Enter a string: ").toLowerCase();
 
-
+// Here we are creating a function that checks whether the given word is palindrome or not
 const checkPalindrome = (input) => {
     let temp = ""
 
